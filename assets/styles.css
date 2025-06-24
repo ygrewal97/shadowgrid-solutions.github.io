@@ -1,81 +1,203 @@
-body {
-  font-family: Arial, sans-serif;
+/* General Styles */
+* {
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
   color: #333;
 }
 
 header {
+  position: fixed;
+  width: 100%;
   background-color: #0056A6;
-  color: #fff;
+  color: white;
   padding: 20px;
+  top: 0;
+  z-index: 10;
+}
+
+header .logo img {
+  width: 120px;
 }
 
 header nav ul {
+  display: flex;
+  justify-content: space-around;
   list-style: none;
-  padding: 0;
 }
 
 header nav ul li {
-  display: inline-block;
-  margin-right: 15px;
+  margin: 0 15px;
 }
 
+header nav ul li a {
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #ff7f00;
+}
+
+/* Hero Section */
 .hero {
-  background-color: #f5f5f5;
-  padding: 40px 20px;
+  position: relative;
+  background-image: url('assets/hero-image.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 5px;
 }
 
 .hero h1 {
-  font-size: 36px;
-  color: #0056A6;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 18px;
+  margin: 20px 0;
 }
 
 .cta-btn {
-  background-color: #0056A6;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
+  background-color: #ff7f00;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 700;
   font-size: 18px;
+  transition: all 0.3s ease;
 }
 
-footer {
+.cta-btn:hover {
+  background-color: #333;
+}
+
+/* Services Section */
+.services {
+  background-color: white;
+  padding: 60px 20px;
   text-align: center;
-  padding: 20px;
-  background-color: #0056A6;
-  color: #fff;
 }
 
-form {
+.service-cards {
   display: flex;
-  flex-direction: column;
-  max-width: 500px;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.service-card {
+  background-color: #fff;
+  border: 2px solid #eee;
+  padding: 30px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 16px;
+}
+
+/* Testimonial Section */
+.testimonials {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonial-slider {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
   margin: 0 auto;
 }
 
-form label {
-  margin-top: 10px;
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 45%;
 }
 
-form input, form textarea {
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.testimonial p {
+  font-size: 18px;
+  font-style: italic;
 }
 
-form button {
+.testimonial footer {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #0056A6;
+}
+
+/* Footer Section */
+footer {
   background-color: #0056A6;
   color: white;
-  padding: 10px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 30px 20px;
+  text-align: center;
 }
 
-form button:hover {
-  background-color: #003d7a;
+footer .social-icons {
+  margin-top: 15px;
+}
+
+footer .social-icons a {
+  font-size: 18px;
+  margin: 0 10px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #ff7f00;
 }
