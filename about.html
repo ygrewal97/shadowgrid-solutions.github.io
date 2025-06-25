@@ -5,79 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Us - ShadowGrid Solutions</title>
   <link rel="stylesheet" href="assets/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
-    <div class="container">
-      <div class="logo">
-        <a href="index.html"><img src="assets/logo.png" alt="ShadowGrid Solutions" /></a>
-      </div>
-      <nav class="nav-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="logo">
+      <a href="index.html"><img src="assets/logo.png" alt="ShadowGrid Solutions" /></a>
     </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- About Us Hero Section -->
-  <section class="hero" style="background-image: url('assets/about-hero.jpg'); height: 60vh;">
-    <div class="hero-content container" style="max-width: 700px;">
+  <!-- About Section -->
+  <section class="section about">
+    <div class="container">
       <h1>About ShadowGrid Solutions</h1>
-      <p>Committed to driving your digital transformation with trust, innovation, and excellence.</p>
+      <p class="intro">
+        We are a forward-thinking IT solutions provider dedicated to transforming businesses through cutting-edge technology and innovation.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Our Mission</h2>
+          <p>
+            At ShadowGrid, our mission is to empower businesses by delivering tailored IT services that drive growth, efficiency, and security.
+          </p>
+
+          <h2>Why Choose Us</h2>
+          <ul class="about-list">
+            <li>✔️ Trusted advisors with deep technical expertise</li>
+            <li>✔️ Scalable, future-ready cloud and security solutions</li>
+            <li>✔️ Personalized service with enterprise-grade results</li>
+            <li>✔️ Proven success in multiple industries</li>
+          </ul>
+        </div>
+
+        <div class="about-image">
+          <img src="assets/team.jpg" alt="Our Team at Work" />
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- About Content Section -->
-  <section class="container" style="max-width: 900px; padding: 80px 20px;">
-    <h2 style="color: #1E40AF; font-family: 'Montserrat', sans-serif; font-size: 2.8rem; margin-bottom: 40px; text-align: center;">
-      Our Mission & Vision
-    </h2>
-    <p style="font-size: 1.1rem; color: #334E68; line-height: 1.7; margin-bottom: 40px;">
-      At ShadowGrid Solutions, our mission is to empower businesses through cutting-edge IT solutions tailored to their unique needs. We envision a future where technology seamlessly supports growth, security, and innovation — making digital transformation effortless and impactful.
-    </p>
-
-    <h3 style="color: #2563EB; font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-bottom: 24px;">
-      What Sets Us Apart
-    </h3>
-    <ul style="list-style: none; padding-left: 0; font-size: 1.1rem; color: #334E68; line-height: 1.6;">
-      <li style="margin-bottom: 18px; position: relative; padding-left: 28px;">
-        <span style="position: absolute; left: 0; top: 0; color: #FBBF24; font-weight: 700; font-size: 1.25rem;">✔</span>
-        Deep expertise in cloud computing, security, and productivity tools.
-      </li>
-      <li style="margin-bottom: 18px; position: relative; padding-left: 28px;">
-        <span style="position: absolute; left: 0; top: 0; color: #FBBF24; font-weight: 700; font-size: 1.25rem;">✔</span>
-        Customized strategies aligned with your business goals.
-      </li>
-      <li style="margin-bottom: 18px; position: relative; padding-left: 28px;">
-        <span style="position: absolute; left: 0; top: 0; color: #FBBF24; font-weight: 700; font-size: 1.25rem;">✔</span>
-        Proactive support and ongoing innovation.
-      </li>
-    </ul>
-
-    <h3 style="color: #2563EB; font-family: 'Montserrat', sans-serif; font-size: 1.8rem; margin-top: 60px; margin-bottom: 24px;">
-      Meet the Team
-    </h3>
-    <p style="font-size: 1.1rem; color: #334E68; line-height: 1.7;">
-      Our team of seasoned IT professionals and strategists are passionate about helping your business thrive. We combine deep technical knowledge with a customer-first mindset to deliver solutions that truly make a difference.
-    </p>
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>Let’s Build the Future of Your Business Together</h2>
+    <a href="contact.html" class="btn-secondary">Get in Touch</a>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content container">
-      <p>© 2025 ShadowGrid Solutions</p>
-      <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
-        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
-      </div>
+    <p>© 2025 ShadowGrid Solutions. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+      <a href="#">Facebook</a>
     </div>
   </footer>
 
