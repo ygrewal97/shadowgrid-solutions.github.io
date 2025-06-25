@@ -1,71 +1,212 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ShadowGrid Solutions - Empowering Your Digital Future</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
-</head>
-<body>
+/* Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="assets/logo.png" alt="ShadowGrid Solutions" />
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #041C32;
+  color: white;
+}
 
-  <!-- Hero Section -->
-  <section class="hero-home">
-    <div class="hero-content">
-      <h1>Empowering Your Business with Next-Level IT Solutions</h1>
-      <p>Innovative technology, scalable cloud services, and secure infrastructure tailored for your growth.</p>
-      <a href="contact.html" class="btn-primary">Request a Free Consultation</a>
-    </div>
-  </section>
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background-color: #0A2A4D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 50px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
 
-  <!-- Services Preview Section -->
-  <section class="services-preview">
-    <h2>What We Offer</h2>
-    <div class="service-cards">
-      <div class="service-card">
-        <img src="assets/icons/m365.svg" alt="Microsoft 365" />
-        <h3>Microsoft 365</h3>
-        <p>Collaboration tools and productivity suites to empower your team.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/azure.svg" alt="Azure Cloud" />
-        <h3>Azure Cloud</h3>
-        <p>Flexible, scalable cloud solutions for modern business demands.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/security.svg" alt="Security Solutions" />
-        <h3>Security Solutions</h3>
-        <p>Comprehensive protection from cyber threats and data breaches.</p>
-      </div>
-    </div>
-  </section>
+.navbar .logo img {
+  height: 40px;
+}
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>© 2025 ShadowGrid Solutions</p>
-      <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
-      </div>
-    </div>
-  </footer>
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
 
-</body>
-</html>
+.navbar nav ul li a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #AFCBFF;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+  background-color: #FF7F00;
+  color: #041C32;
+}
+
+/* Hero Section */
+.hero-home {
+  position: relative;
+  height: 100vh;
+  background: url('../assets/hero-bg.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero-home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 28, 50, 0.7);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  color: #D7E6F9;
+}
+
+.btn-primary {
+  background-color: #FF7F00;
+  padding: 16px 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  color: #041C32;
+  box-shadow: 0 4px 12px rgba(255, 127, 0, 0.6);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #e56f00;
+  box-shadow: 0 6px 16px rgba(229, 111, 0, 0.8);
+}
+
+/* Services Preview Section */
+.services-preview {
+  background-color: #0A2A4D;
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: -100px auto 80px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.services-preview h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  color: #FF7F00;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  background-color: #163A66;
+  border-radius: 15px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(255,127,0,0.7);
+}
+
+.service-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.service-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #FFB870;
+}
+
+.service-card p {
+  font-family: 'Roboto', sans-serif;
+  color: #cdd7eb;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Footer */
+.footer {
+  background-color: #041C32;
+  color: #8ba4b8;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer p {
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  color: #8ba4b8;
+  margin: 0 15px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #FF7F00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-preview {
+    margin: -60px 20px 40px;
+    padding: 50px 20px;
+  }
+}
