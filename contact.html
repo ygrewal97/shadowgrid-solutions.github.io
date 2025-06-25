@@ -3,70 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us - Your Business Name</title>
+  <title>Contact | ShadowGrid Solutions - IT Software & Hardware Solutions</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="navbar" role="banner">
-    <a href="index.html" class="logo" aria-label="Your Business Name Home">
-      <img src="assets/logo.svg" alt="Your Business Logo" />
-    </a>
-    <nav role="navigation" aria-label="Primary navigation">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="ShadowGrid Solutions" />
+      <span class="company-name">ShadowGrid Solutions</span>
+    </div>
+    <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="contact-form fade-in-up" tabindex="-1" aria-label="Contact form">
-      <h1>Contact Us</h1>
-      <form action="#" method="post" novalidate>
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Your full name" required aria-required="true" />
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>Contact ShadowGrid Solutions</h1>
+    <p>Your IT transformation starts with a conversation. Reach out to us today.</p>
+  </section>
 
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required aria-required="true" />
+  <!-- Contact Form Section -->
+  <section class="contact-section">
+    <form action="#" method="POST" class="contact-form" novalidate>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" placeholder="Your message here..." required aria-required="true"></textarea>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
 
-        <button type="submit" class="btn-primary">Send Message</button>
-      </form>
-    </section>
-  </main>
+      <label for="company">Company Name</label>
+      <input type="text" id="company" name="company" placeholder="Your company" />
 
-  <footer>
-    <p>&copy; 2025 Your Business Name. All rights reserved.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="terms.html">Terms of Service</a>
-    </p>
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="How can we help you?" required></textarea>
+
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Contact Details -->
+  <section class="contact-details">
+    <h2>Our Contact Information</h2>
+    <p><strong>Email:</strong> <a href="mailto:info@shadowgridsolutions.com">info@shadowgridsolutions.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+    <p><strong>Address:</strong> 123 IT Innovation Drive, Tech City, TX 75001</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 ShadowGrid Solutions</p>
   </footer>
 
-  <script>
-    // Scroll fade-in animation script
-    document.addEventListener('DOMContentLoaded', () => {
-      const faders = document.querySelectorAll('.fade-in-up');
-      const options = {
-        threshold: 0.1,
-      };
-      const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('visible');
-          appearOnScroll.unobserve(entry.target);
-        });
-      }, options);
-
-      faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-      });
-    });
-  </script>
 </body>
 </html>
