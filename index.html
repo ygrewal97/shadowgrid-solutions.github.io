@@ -1,196 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shadowgrid Solutions | IT Software & Hardware Solutions</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shadowgrid Solutions | IT Software & Hardware Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="assets/styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init('Z4go33WgZPBJe27xq'); // your public key
+  })();
+</script>
 </head>
 <body>
-  <nav class="navbar" role="navigation" aria-label="Main Navigation">
-    <div class="container nav-content">
-      <a href="#hero" class="logo-link" aria-label="Shadowgrid Solutions Home">
-        <img src="assets/logo.png" alt="Shadowgrid Solutions Logo" class="logo" />
-        <div class="brand-text">
-          <h1>Shadowgrid Solutions</h1>
-          <p>IT Software & Hardware Solutions</p>
-        </div>
-      </a>
-      <ul class="nav-links" role="menubar">
-        <li><a href="#specialties" class="nav-item" role="menuitem" tabindex="0">Our Specialties</a></li>
-        <li><a href="#about" class="nav-item" role="menuitem" tabindex="0">About</a></li>
-        <li><a href="#contact" class="nav-item" role="menuitem" tabindex="0">Contact</a></li>
-      </ul>
-      <button class="btn-primary cta-btn" onclick="scrollToContact()" aria-label="Schedule a Free Consultation">Schedule a Free Consultation</button>
-      <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+<header class="header container">
+  <div class="header-left">
+    <img src="assets/logo.png" alt="Shadowgrid Solutions Logo" class="logo" />
+    <div>
+      <h1 class="company-name">Shadowgrid Solutions</h1>
+      <p class="tagline">IT Software & Hardware Solutions</p>
     </div>
-    <ul id="nav-menu" class="nav-open" hidden>
-      <li><a href="#specialties" class="nav-item">Our Specialties</a></li>
-      <li><a href="#about" class="nav-item">About</a></li>
-      <li><a href="#contact" class="nav-item">Contact</a></li>
-      <li><button class="btn-primary cta-btn" onclick="scrollToContact()">Schedule a Free Consultation</button></li>
-    </ul>
-  </nav>
+  </div>
+  <div class="header-right">
+    <a href="tel:02039677622" class="contact-info">📞 020 3967 7622</a>
+    <a href="mailto:info@shadowgridsolutions.co.uk" class="contact-info">info@shadowgridsolutions.co.uk</a>
+    <a href="mailto:sales@shadowgridsolutions.co.uk" class="contact-info">sales@shadowgridsolutions.co.uk</a>
+    <button class="btn-primary" onclick="scrollToContact()">Get a Free Consultation</button>
+  </div>
+</header>
 
-  <header class="hero" id="hero" aria-label="Hero Section with key offerings and call to action">
-    <div class="hero-overlay"></div>
-    <div class="hero-content container">
-      <h2>Save on Your Microsoft 365 & Azure Subscriptions</h2>
-      <p>Thanks to our Microsoft Partnership, get up to 30% off your current plans with the same features and service.</p>
-      <button class="btn-primary hero-btn" onclick="scrollToContact()">Schedule a Free Consultation</button>
-    </div>
-  </header>
+<section class="hero-home" aria-label="Hero Section">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h2>Save on Your Microsoft 365 & Azure Subscriptions</h2>
+    <p>Thanks to our Microsoft Partnership, get up to <strong>30% off</strong> your current plans with the same features and service.</p>
+    <button class="btn-primary" onclick="scrollToContact()">Schedule a Free Consultation</button>
+  </div>
+</section>
 
-  <section class="specialties" id="specialties" tabindex="-1" aria-label="Our Specialties section highlighting key services">
-    <div class="container">
-      <h3>Our Specialties</h3>
-      <div class="specialties-grid">
-        <article class="specialty-card" tabindex="0" aria-describedby="m365-desc">
-          <img src="assets/icons/microsoft365.svg" alt="Microsoft 365 & Azure Licensing Icon" class="icon" />
-          <h4>Microsoft 365 & Azure Licensing</h4>
-          <p id="m365-desc">Leverage our Microsoft partnership to get unbeatable pricing on your M365 and Azure licenses — identical plans, lower cost.</p>
-        </article>
-        <article class="specialty-card" tabindex="0" aria-describedby="security-desc">
-          <img src="assets/icons/security.svg" alt="Cloud & Endpoint Security Icon" class="icon" />
-          <h4>Cloud & Endpoint Security</h4>
-          <p id="security-desc">Protect your business with cutting-edge security solutions for cloud environments and endpoint devices.</p>
-        </article>
-        <article class="specialty-card" tabindex="0" aria-describedby="thirdparty-desc">
-          <img src="assets/icons/software.svg" alt="Third-Party Software Licenses Icon" class="icon" />
-          <h4>Third-Party Software Licenses</h4>
-          <p id="thirdparty-desc">We offer competitive licenses for industry-leading software like Adobe, BitTitan, and more, tailored to your needs.</p>
-        </article>
-        <article class="specialty-card" tabindex="0" aria-describedby="hardware-desc">
-          <img src="assets/icons/hardware.svg" alt="Hardware Solutions Icon" class="icon" />
-          <h4>Hardware Solutions</h4>
-          <p id="hardware-desc">From desktops to servers and peripherals, get quality hardware at discounted prices, bundled with expert support.</p>
-        </article>
+<section class="specialties" aria-label="Our Specialties">
+  <div class="container">
+    <h2>Our Specialties</h2>
+    <div class="hover-boxes">
+      <div class="hover-box" tabindex="0" aria-describedby="desc-m365">
+        <h3>Microsoft 365 & Azure Licensing</h3>
+        <p id="desc-m365">Leverage our Microsoft partnership for unbeatable pricing on M365 and Azure licenses — identical plans, lower cost.</p>
+      </div>
+      <div class="hover-box" tabindex="0" aria-describedby="desc-security">
+        <h3>Cloud & Endpoint Security</h3>
+        <p id="desc-security">Protect your business with cutting-edge cloud and endpoint security solutions.</p>
+      </div>
+      <div class="hover-box" tabindex="0" aria-describedby="desc-software">
+        <h3>Third-Party Software Licenses</h3>
+        <p id="desc-software">Competitive licenses for Adobe, BitTitan, and more, tailored to your business needs.</p>
+      </div>
+      <div class="hover-box" tabindex="0" aria-describedby="desc-hardware">
+        <h3>Hardware Solutions</h3>
+        <p id="desc-hardware">Quality desktops, servers, and peripherals at discounted prices, bundled with expert support.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="about" id="about" tabindex="-1" aria-label="About Shadowgrid Solutions company overview">
-    <div class="container">
-      <h3>About Shadowgrid Solutions</h3>
-      <p>Shadowgrid Solutions partners with businesses to optimize their IT investments — saving costs on licenses and hardware without compromising service quality. Our expertise spans Microsoft technologies and a broad portfolio of trusted software and hardware vendors.</p>
-      <p>We pride ourselves on transparent pricing, personalized service, and delivering measurable savings to help your business grow.</p>
-    </div>
-  </section>
+<section class="about" aria-label="About Shadowgrid Solutions">
+  <div class="container">
+    <h2>About Shadowgrid Solutions</h2>
+    <p>
+      Shadowgrid Solutions partners with businesses to optimize IT investments — saving costs on licenses and hardware without compromising quality.
+      Our expertise spans Microsoft technologies and a broad portfolio of trusted software and hardware vendors.
+    </p>
+    <p>
+      We pride ourselves on transparent pricing, personalized service, and delivering measurable savings to help your business grow.
+    </p>
+  </div>
+</section>
 
-  <section class="contact" id="contact" tabindex="-1" aria-label="Contact Shadowgrid Solutions for inquiries or consultation">
-    <div class="container contact-container">
-      <h3>Get In Touch</h3>
-      <form id="contact-form" class="contact-form" aria-label="Contact form">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required aria-required="true" />
-        
-        <label for="company">Company</label>
-        <input type="text" id="company" name="company" />
-        
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required aria-required="true" />
-        
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-        
-        <button type="submit" class="btn-primary">Request a Call</button>
-      </form>
-      <aside class="contact-info" aria-label="Contact information">
-        <p><strong>Phone:</strong> <a href="tel:+442039677622">0203 967 7622</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@shadowgridsolutions.co.uk">info@shadowgridsolutions.co.uk</a></p>
-        <p><strong>Sales:</strong> <a href="mailto:sales@shadowgridsolutions.co.uk">sales@shadowgridsolutions.co.uk</a></p>
-        <p><strong>Companies House Number:</strong> 16527977</p>
-      </aside>
-    </div>
-  </section>
+<section class="contact" aria-label="Contact Us" id="contact">
+  <div class="container contact-section">
+    <h2>Get In Touch</h2>
+    <form id="contact-form" class="contact-form" onsubmit="sendEmail(event)" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name" />
+      
+      <label for="company">Company</label>
+      <input type="text" id="company" name="company" placeholder="Your company name" />
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required autocomplete="email" placeholder="Your email address" />
+      
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+      
+      <button type="submit" class="btn-primary">Request a Call</button>
+    </form>
+    <p id="form-message" class="form-message" aria-live="polite"></p>
+  </div>
+</section>
 
-  <footer class="footer" aria-label="Footer with copyright info">
-    <div class="footer-container">
-      &copy; 2025 Shadowgrid Solutions. All rights reserved.
-    </div>
-  </footer>
+<footer class="footer">
+  <div class="container footer-container">
+    <p>📞 020 3967 7622 | 📧 info@shadowgridsolutions.co.uk | 📧 sales@shadowgridsolutions.co.uk</p>
+    <p>Companies House Number: 16527977</p>
+    <p>© 2025 Shadowgrid Solutions. All rights reserved.</p>
+  </div>
+</footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    emailjs.init('YOUR_EMAILJS_USER_ID'); // Replace with your EmailJS user ID
+<script>
+function scrollToContact() {
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
 
-    // Smooth scroll function
-    function smoothScroll(target) {
-      document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
-    }
+function sendEmail(e) {
+  e.preventDefault();
+  const form = e.target;
+  const formMessage = document.getElementById('form-message');
 
-    // Scroll to contact section
-    function scrollToContact() {
-      smoothScroll('#contact');
-    }
+  if (!form.checkValidity()) {
+    formMessage.textContent = 'Please fill out all required fields correctly.';
+    formMessage.style.color = '#f44336';
+    return;
+  }
 
-    // Hamburger toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.getElementById('nav-menu');
+  const templateParams = {
+    name: form.name.value,
+    company: form.company.value,
+    email: form.email.value,
+    message: form.message.value,
+  };
 
-    hamburger.addEventListener('click', () => {
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-      hamburger.setAttribute('aria-expanded', !expanded);
-      navMenu.hidden = !navMenu.hidden;
+  emailjs.send('template_qigm78m', templateParams)
+    .then(() => {
+      formMessage.textContent = 'Thank you for contacting Shadowgrid Solutions. We will get back to you shortly!';
+      formMessage.style.color = '#1fb6ff';
+      form.reset();
+      sendAutoReply(templateParams.email, templateParams.name);
+    }, (error) => {
+      formMessage.textContent = 'Oops! Something went wrong. Please try again later.';
+      formMessage.style.color = '#f44336';
+      console.error('EmailJS error:', error);
     });
+}
 
-    // Close mobile nav on link click
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.setAttribute('aria-expanded', false);
-        navMenu.hidden = true;
-      });
-    });
-
-    // Scroll fade-in animations
-    const fadeElements = document.querySelectorAll('.specialty-card, .about, .contact-container, .hero-content');
-    const observerOptions = {
-      threshold: 0.15
-    };
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in-up');
-          fadeObserver.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-    fadeElements.forEach(el => fadeObserver.observe(el));
-
-    // Parallax effect for hero background
-    const hero = document.querySelector('.hero');
-    window.addEventListener('scroll', () => {
-      let offset = window.pageYOffset;
-      hero.style.backgroundPositionY = offset * 0.5 + 'px';
-    });
-
-    // EmailJS form submission
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const templateParams = {
-        from_name: this.name.value,
-        company: this.company.value,
-        from_email: this.email.value,
-        message: this.message.value,
-      };
-
-      emailjs.send('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', templateParams)
-        .then(() => {
-          alert('Thank you for reaching out! We will get back to you shortly.');
-          this.reset();
-        }, (error) => {
-          alert('Oops! Something went wrong. Please try again later.');
-          console.error('EmailJS error:', error);
-        });
-    });
-  </script>
+function sendAutoReply(userEmail, userName) {
+  const autoReplyParams = {
+    to_email: userEmail,
+    to_name: userName,
+    from_name: 'Shadowgrid Solutions',
+  };
+  emailjs.send('template_auto_reply', autoReplyParams)
+    .catch(err => console.error('Auto-reply error:', err));
+}
+</script>
 </body>
 </html>
