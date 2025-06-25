@@ -3,73 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us - ShadowGrid Solutions</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <title>About Us | ShadowGrid Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-      <a href="index.html"><img src="assets/logo.png" alt="ShadowGrid Solutions" /></a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="navbar" role="banner">
+  <a href="index.html" class="logo" aria-label="ShadowGrid Solutions Home">
+    <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
+  </a>
+  <nav role="navigation" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- About Section -->
-  <section class="section about">
-    <div class="container">
-      <h1>About ShadowGrid Solutions</h1>
-      <p class="intro">
-        We are a forward-thinking IT solutions provider dedicated to transforming businesses through cutting-edge technology and innovation.
-      </p>
-
-      <div class="about-grid">
-        <div class="about-text">
-          <h2>Our Mission</h2>
-          <p>
-            At ShadowGrid, our mission is to empower businesses by delivering tailored IT services that drive growth, efficiency, and security.
-          </p>
-
-          <h2>Why Choose Us</h2>
-          <ul class="about-list">
-            <li>✔️ Trusted advisors with deep technical expertise</li>
-            <li>✔️ Scalable, future-ready cloud and security solutions</li>
-            <li>✔️ Personalized service with enterprise-grade results</li>
-            <li>✔️ Proven success in multiple industries</li>
-          </ul>
-        </div>
-
-        <div class="about-image">
-          <img src="assets/team.jpg" alt="Our Team at Work" />
-        </div>
-      </div>
-    </div>
+<main>
+  <section class="about-intro fade-in-up" aria-label="About ShadowGrid Solutions" style="max-width:900px; margin: 100px auto 60px; padding: 0 30px;">
+    <h1>About ShadowGrid Solutions</h1>
+    <p>Founded on the principles of innovation, integrity, and excellence, we deliver bespoke IT strategies that drive measurable results. Our expert team is passionate about empowering clients with technology tailored to their unique challenges and ambitions.</p>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-banner">
-    <h2>Let’s Build the Future of Your Business Together</h2>
-    <a href="contact.html" class="btn-secondary">Get in Touch</a>
-  </section>
+  <section class="faq fade-in-up" aria-label="Frequently Asked Questions">
+    <h2>Frequently Asked Questions</h2>
+    <dl>
+      <dt tabindex="0">What industries do you specialize in?</dt>
+      <dd>We work across diverse sectors including finance, healthcare, retail, and technology.</dd>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2025 ShadowGrid Solutions. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="#">LinkedIn</a>
-      <a href="#">Twitter</a>
-      <a href="#">Facebook</a>
-    </div>
-  </footer>
+      <dt tabindex="0">How do you ensure data security?</dt>
+      <dd>Our cybersecurity solutions employ industry-leading practices, including encryption, monitoring, and compliance standards.</dd>
+
+      <dt tabindex="0">Can you support remote teams?</dt>
+      <dd>Absolutely! We offer cloud services and collaboration tools designed for seamless remote work.</dd>
+    </dl>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <p>© 2025 ShadowGrid Solutions. All rights reserved.</p>
+  <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Scroll animations
+    const elements = document.querySelectorAll('.fade-in-up');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(el => observer.observe(el));
+
+    // FAQ toggle
+    const faqQuestions = document.querySelectorAll('.faq dt');
+    faqQuestions.forEach(dt => {
+      dt.addEventListener('click', () => {
+        const open = dt.classList.toggle('open');
+        const dd = dt.nextElementSibling;
+        if(open) {
+          dd.classList.add('open');
+          dt.setAttribute('aria-expanded', 'true');
+        } else {
+          dd.classList.remove('open');
+          dt.setAttribute('aria-expanded', 'false');
+        }
+      });
+      dt.addEventListener('keypress', (e) => {
+        if(e.key === 'Enter' || e.key === ' ') {
+          dt.click();
+          e.preventDefault();
+        }
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
