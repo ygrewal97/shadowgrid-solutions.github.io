@@ -2,108 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shadowgrid Solutions | IT Software & Hardware Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadowgrid Solutions | Enterprise Software & IT Licensing</title>
   <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
-    <div class="container navbar-inner">
-      <a href="#hero" class="logo-link">
-        <img src="assets/logo.png" alt="Shadowgrid Solutions Logo" class="logo" />
-        <div class="brand-text">
-          <h1>Shadowgrid Solutions</h1>
-          <p>IT Software & Hardware Solutions</p>
-        </div>
-      </a>
+    <div class="container nav-inner">
+      <img src="assets/logo.png" alt="Shadowgrid Solutions Logo" class="logo" />
       <nav>
         <ul class="nav-links">
-          <li><a href="#specialties" class="nav-link">Our Specialties</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#contact" class="nav-link btn-primary">Get In Touch</a></li>
+          <li><a href="#specialties">Our Specialties</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="btn-primary">Get In Touch</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="container hero-content">
-      <h2>Save on Your Microsoft 365 & Azure Subscriptions</h2>
-      <p>Thanks to our Microsoft Partnership, get up to <strong>30% off</strong> your current plans with the <br /> same features and service.</p>
-      <a href="#contact" class="btn-primary btn-hero">Schedule a Free Consultation</a>
+  <section id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>Save on Microsoft 365 & Azure</h1>
+      <p>Same licenses. Lower prices. Plus hardware and full software support from a certified Microsoft Partner.</p>
+      <a href="#contact" class="btn-hero">Schedule a Free Consultation</a>
     </div>
   </section>
 
-  <!-- Our Specialties -->
-  <section id="specialties" class="specialties">
-    <div class="container">
-      <h2>Our Specialties</h2>
-      <div class="specialties-grid">
-
-        <article class="specialty-card">
-          <h3>Microsoft 365 & Azure Licensing</h3>
-          <p>Leverage our Microsoft partnership to get unbeatable pricing on your M365 and Azure licenses — identical plans, lower cost.</p>
-        </article>
-
-        <article class="specialty-card">
-          <h3>Cloud & Endpoint Security</h3>
-          <p>Protect your business with cutting-edge security solutions for cloud environments and endpoint devices.</p>
-        </article>
-
-        <article class="specialty-card">
-          <h3>Third-Party Software Licenses</h3>
-          <p>We offer competitive licenses for industry-leading software like Adobe, BitTitan, and more, tailored to your needs.</p>
-        </article>
-
-        <article class="specialty-card">
-          <h3>Hardware Solutions</h3>
-          <p>From desktops to servers and peripherals, get quality hardware at discounted prices, bundled with expert support.</p>
-        </article>
-
+  <!-- Specialties -->
+  <section id="specialties" class="container">
+    <h2>Our Specialties</h2>
+    <div class="specialty-grid">
+      <div class="specialty-card">
+        <h3>Microsoft 365 & Azure Licensing</h3>
+        <p>Get unbeatable pricing on your M365 and Azure licenses — identical plans, just lower costs.</p>
+      </div>
+      <div class="specialty-card">
+        <h3>Cloud & Endpoint Security</h3>
+        <p>Protect your business with cutting-edge security for cloud infrastructure and endpoint devices.</p>
+      </div>
+      <div class="specialty-card">
+        <h3>Third-Party Software Licenses</h3>
+        <p>Discounted licenses from Adobe, BitTitan, and more — tailored for your operations.</p>
+      </div>
+      <div class="specialty-card">
+        <h3>Hardware Solutions</h3>
+        <p>Get quality desktops, servers, and peripherals bundled with expert support.</p>
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="about">
+  <section id="about" class="section-light">
     <div class="container about-content">
       <h2>About Shadowgrid Solutions</h2>
-      <p>Shadowgrid Solutions partners with businesses to optimize their IT investments — saving costs on licenses and hardware without compromising service quality. Our expertise spans Microsoft technologies and a broad portfolio of trusted software and hardware vendors.</p>
-      <p>We pride ourselves on transparent pricing, personalized service, and delivering measurable savings to help your business grow.</p>
+      <p>We help businesses save on Microsoft licensing, hardware, and software without compromising quality or service. As a trusted partner, we deliver tailored solutions, world-class support, and enterprise-grade infrastructure at a better cost.</p>
+      <p>Our clients include SMBs and enterprises across the UK looking to modernize IT and reduce spend.</p>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact">
-    <div class="container contact-container">
+  <section id="contact" class="section-dark">
+    <div class="container contact-form">
       <h2>Get In Touch</h2>
-      <form class="contact-form" action="#" method="POST" novalidate>
+      <form action="mailto:your@email.com" method="POST" enctype="text/plain">
         <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your full name" required />
+        <input type="text" id="name" name="Name" required>
 
         <label for="company">Company</label>
-        <input id="company" name="company" type="text" placeholder="Your company name" required />
+        <input type="text" id="company" name="Company" required>
 
         <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="Your email address" required />
+        <input type="email" id="email" name="Email" required>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+        <textarea id="message" name="Message" rows="6" placeholder="How can we help you?" required></textarea>
 
-        <button type="submit" class="btn-primary btn-submit">Request a Call</button>
+        <button type="submit" class="btn-submit">Request a Call</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>© 2025 Shadowgrid Solutions. All rights reserved.</p>
-    </div>
+    <p>© 2025 Shadowgrid Solutions. All rights reserved.</p>
   </footer>
 
 </body>
