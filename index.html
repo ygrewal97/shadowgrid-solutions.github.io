@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ShadowGrid Solutions — Empowering Your Digital Future</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <title>ShadowGrid Solutions - Empowering Your Digital Future</title>
   <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
       <img src="assets/logo.png" alt="ShadowGrid Solutions" />
@@ -23,43 +24,72 @@
     </nav>
   </header>
 
-  <main class="hero">
-    <div class="hero-content">
+  <!-- Hero Section -->
+  <section class="hero-home">
+    <div class="hero-content fade-up">
       <h1>Empowering Your Business with Next-Level IT Solutions</h1>
       <p>Innovative technology, scalable cloud services, and secure infrastructure tailored for your growth.</p>
       <a href="contact.html" class="btn-primary">Request a Free Consultation</a>
     </div>
-  </main>
+  </section>
 
+  <!-- Services Preview Section -->
   <section class="services-preview">
-    <h2>What We Offer</h2>
+    <h2 class="fade-up">What We Offer</h2>
     <div class="service-cards">
-      <article class="service-card">
+      <div class="service-card fade-up">
         <img src="assets/icons/m365.svg" alt="Microsoft 365" />
         <h3>Microsoft 365</h3>
         <p>Collaboration tools and productivity suites to empower your team.</p>
-      </article>
-      <article class="service-card">
+      </div>
+      <div class="service-card fade-up">
         <img src="assets/icons/azure.svg" alt="Azure Cloud" />
         <h3>Azure Cloud</h3>
         <p>Flexible, scalable cloud solutions for modern business demands.</p>
-      </article>
-      <article class="service-card">
+      </div>
+      <div class="service-card fade-up">
         <img src="assets/icons/security.svg" alt="Security Solutions" />
         <h3>Security Solutions</h3>
         <p>Comprehensive protection from cyber threats and data breaches.</p>
-      </article>
+      </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2025 ShadowGrid Solutions</p>
-    <div class="social-icons">
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-      <a href="https://twitter.com" target="_blank" aria-label="Twitter">Twitter</a>
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook">Facebook</a>
+  <!-- Footer -->
+  <footer class="footer fade-up">
+    <div class="footer-content">
+      <p>© 2025 ShadowGrid Solutions</p>
+      <div class="social-icons">
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+      </div>
     </div>
   </footer>
+
+  <!-- Scroll Animation JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faders = document.querySelectorAll('.fade-up');
+
+      const appearOptions = {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px',
+      };
+
+      const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('visible');
+          appearOnScroll.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
 
 </body>
 </html>
