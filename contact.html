@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - ShadowGrid Solutions</title>
   <link rel="stylesheet" href="assets/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
+
+  <!-- Navbar -->
+  <header class="navbar">
     <div class="logo">
       <img src="assets/logo.png" alt="ShadowGrid Solutions">
     </div>
@@ -16,15 +19,22 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="contact-us">
-    <h1>Contact ShadowGrid Solutions</h1>
-    <p>We'd love to hear from you! Get in touch to request a free savings review or for any inquiries.</p>
-    
+  <!-- Hero Section for Contact -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Contact Us</h1>
+      <p>We’d love to hear from you. Get in touch for any inquiries, support, or consultations.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-form">
+    <h2>Get in Touch</h2>
     <form action="submit_form.php" method="POST">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" required>
@@ -42,8 +52,17 @@
     </form>
   </section>
 
-  <footer>
-    <p>© 2025 ShadowGrid Solutions Limited</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 ShadowGrid Solutions</p>
+      <div class="social-icons">
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+      </div>
+    </div>
   </footer>
+
 </body>
 </html>
