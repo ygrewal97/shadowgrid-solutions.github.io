@@ -2,112 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elite Tech Solutions</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shadowgrid Solutions - IT Software & Hardware Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="navbar">
-    <div class="logo">
-      <img src="assets/logo.png" alt="Company Logo">
-      <div class="company-name">Elite Tech</div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#specialties">Specialties</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="theme-toggle">
-      <i class="fa-solid fa-sun"></i>
-      <label class="switch">
-        <input type="checkbox" id="darkModeToggle">
-        <span class="slider round"></span>
-      </label>
-      <i class="fa-solid fa-moon"></i>
+    <div class="container navbar-container">
+      <div class="logo">
+        <img src="assets/shadowgrid-logo.svg" alt="Shadowgrid Solutions Logo" />
+        <div class="company-name">
+          Shadowgrid Solutions<br />
+          <span class="tagline">IT Software & Hardware Solutions</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#specialties" class="active">Our Specialties</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <section class="hero-home" id="home">
-    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-      <h1>Innovating the Future of Digital</h1>
-      <p>Your partner for performance-driven digital experiences.</p>
-      <a href="#contact" class="btn-primary">Get in Touch</a>
+  <section class="hero-home">
+    <div class="container hero-content">
+      <h1>Save on Your Microsoft 365 & Azure Subscriptions</h1>
+      <p>Thanks to our Microsoft Partnership, get up to 30% off your current plans with the same features and service.</p>
+      <a href="#contact" class="btn-primary">Schedule a Free Consultation</a>
     </div>
   </section>
 
   <section id="specialties">
-    <h2 data-aos="fade-up">Our Specialties</h2>
+    <h2>Our Specialties</h2>
     <div class="hover-boxes">
-      <div class="hover-box" data-aos="fade-up" data-aos-delay="100">
-        <i class="fa-solid fa-code fa-2x"></i>
-        <h3>Web Development</h3>
-        <p>Cutting-edge websites and applications built with modern frameworks.</p>
+      <div class="hover-box">
+        <h3>Microsoft 365 & Azure Licensing</h3>
+        <p>Leverage our Microsoft partnership to get unbeatable pricing on your M365 and Azure licenses — identical plans, lower cost.</p>
       </div>
-      <div class="hover-box" data-aos="fade-up" data-aos-delay="200">
-        <i class="fa-solid fa-paintbrush fa-2x"></i>
-        <h3>UI/UX Design</h3>
-        <p>Stunning user interfaces with a focus on usability and engagement.</p>
+      <div class="hover-box">
+        <h3>Cloud & Endpoint Security</h3>
+        <p>Protect your business with cutting-edge security solutions for cloud environments and endpoint devices.</p>
       </div>
-      <div class="hover-box" data-aos="fade-up" data-aos-delay="300">
-        <i class="fa-solid fa-cloud fa-2x"></i>
-        <h3>Cloud Integration</h3>
-        <p>Seamless migration and optimization across leading cloud platforms.</p>
+      <div class="hover-box">
+        <h3>Third-Party Software Licenses</h3>
+        <p>We offer competitive licenses for industry-leading software like Adobe, BitTitan, and more, tailored to your needs.</p>
       </div>
-      <div class="hover-box" data-aos="fade-up" data-aos-delay="400">
-        <i class="fa-solid fa-robot fa-2x"></i>
-        <h3>AI & Automation</h3>
-        <p>Smart solutions that empower your business with intelligent systems.</p>
+      <div class="hover-box">
+        <h3>Hardware Solutions</h3>
+        <p>From desktops to servers and peripherals, get quality hardware at discounted prices, bundled with expert support.</p>
       </div>
-      <div class="hover-box" data-aos="fade-up" data-aos-delay="500">
-        <i class="fa-solid fa-shield-alt fa-2x"></i>
-        <h3>Cybersecurity</h3>
-        <p>Robust encryption, threat detection, and data protection.</p>
-      </div>
-      <div class="hover-box" data-aos="fade-up" data-aos-delay="600">
-        <i class="fa-solid fa-mobile-screen-button fa-2x"></i>
-        <h3>Mobile Apps</h3>
-        <p>High-performance, responsive applications users love.</p>
-      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about-content">
+      <h2>About Shadowgrid Solutions</h2>
+      <p>Shadowgrid Solutions partners with businesses to optimize their IT investments — saving costs on licenses and hardware without compromising service quality. Our expertise spans Microsoft technologies and a broad portfolio of trusted software and hardware vendors.</p>
+      <p>We pride ourselves on transparent pricing, personalized service, and delivering measurable savings to help your business grow.</p>
     </div>
   </section>
 
   <section id="contact">
-    <h2 data-aos="fade-up">Contact Us</h2>
-    <div class="contact-section" data-aos="fade-up" data-aos-delay="200">
-      <form class="contact-form">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Your full name" required />
+    <h2>Get In Touch</h2>
+    <div class="container contact-section">
+      <form class="contact-form" action="mailto:contact@shadowgridsolutions.com" method="POST" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="Name" required />
+
+        <label for="company">Company</label>
+        <input type="text" id="company" name="Company" required />
+
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Your email address" required />
+        <input type="email" id="email" name="Email" required />
+
         <label for="message">Message</label>
-        <textarea id="message" rows="6" placeholder="Tell us what you need..." required></textarea>
-        <button type="submit" class="btn-primary">Send Message</button>
+        <textarea id="message" name="Message" rows="5" placeholder="How can we help you?" required></textarea>
+
+        <button type="submit" class="btn-primary">Request a Call</button>
       </form>
-      <div class="contact-info">
-        <h2>Get in Touch</h2>
-        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:contact@elitetech.com">contact@elitetech.com</a></p>
-        <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
-        <p><i class="fa-solid fa-map-marker-alt"></i> 1234 Innovation Drive, San Francisco, CA</p>
-      </div>
     </div>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Elite Tech Solutions. All rights reserved.</p>
+    <p>© 2025 Shadowgrid Solutions. All rights reserved.</p>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-    const toggle = document.getElementById('darkModeToggle');
-    toggle.addEventListener('change', () => {
-      document.body.classList.toggle('light-mode');
-    });
-  </script>
 </body>
 </html>
