@@ -1,4 +1,4 @@
-/* Global Reset */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +9,13 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #f4f4f4;
   color: #333;
+  line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
@@ -24,6 +24,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .navbar .logo img {
@@ -53,10 +54,10 @@ body {
   color: #ff7f00;
 }
 
-/* Hero Section with Parallax Effect */
+/* Hero Section */
 .hero {
   position: relative;
-  background-image: url('assets/hero-image.jpg');
+  background-image: url('assets/hero-video.mp4');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -68,11 +69,10 @@ body {
   background-attachment: fixed;
 }
 
-.hero-content {
+.hero-overlay {
   background: rgba(0, 0, 0, 0.7);
-  padding: 50px 30px;
-  border-radius: 10px;
-  max-width: 800px;
+  padding: 50px;
+  border-radius: 5px;
 }
 
 .hero h1 {
@@ -100,11 +100,11 @@ body {
   color: #ff7f00;
 }
 
-/* Services Section with Hover Effects */
+/* Services Section */
 .services {
   padding: 80px 20px;
-  background-color: white;
   text-align: center;
+  background-color: white;
 }
 
 .services h2 {
@@ -125,11 +125,12 @@ body {
   width: 30%;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
 }
 
 .service-card img {
