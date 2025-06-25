@@ -1,196 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shadowgrid Solutions | IT Software & Hardware Solutions</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <title>Shadowgrid Solutions - IT Software & Hardware Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="icon" href="assets/logo.png" type="image/png" />
 </head>
 <body>
-  <nav class="navbar" role="navigation" aria-label="Main Navigation">
+  <header class="navbar" role="banner">
     <div class="container nav-content">
-      <a href="#hero" class="logo-link" aria-label="Shadowgrid Solutions Home">
+      <a href="#" class="logo-link" aria-label="Shadowgrid Solutions Home">
         <img src="assets/logo.png" alt="Shadowgrid Solutions Logo" class="logo" />
         <div class="brand-text">
           <h1>Shadowgrid Solutions</h1>
           <p>IT Software & Hardware Solutions</p>
         </div>
       </a>
-      <ul class="nav-links" role="menubar">
-        <li><a href="#specialties" class="nav-item" role="menuitem" tabindex="0">Our Specialties</a></li>
-        <li><a href="#about" class="nav-item" role="menuitem" tabindex="0">About</a></li>
-        <li><a href="#contact" class="nav-item" role="menuitem" tabindex="0">Contact</a></li>
-      </ul>
-      <button class="btn-primary cta-btn" onclick="scrollToContact()" aria-label="Schedule a Free Consultation">Schedule a Free Consultation</button>
-      <button class="hamburger" aria-label="Toggle Menu" aria-expanded="false" aria-controls="nav-menu">
+
+      <nav class="nav-links" role="navigation" aria-label="Primary Navigation">
+        <ul>
+          <li><a href="#home" class="nav-item">Home</a></li>
+          <li><a href="#specialties" class="nav-item">Specialties</a></li>
+          <li><a href="#about" class="nav-item">About</a></li>
+          <li><a href="#contact" class="nav-item">Contact</a></li>
+          <li><a href="#contact" class="btn-primary cta-btn">Schedule a Call</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
-    <ul id="nav-menu" class="nav-open" hidden>
-      <li><a href="#specialties" class="nav-item">Our Specialties</a></li>
-      <li><a href="#about" class="nav-item">About</a></li>
-      <li><a href="#contact" class="nav-item">Contact</a></li>
-      <li><button class="btn-primary cta-btn" onclick="scrollToContact()">Schedule a Free Consultation</button></li>
-    </ul>
-  </nav>
-
-  <header class="hero" id="hero" aria-label="Hero Section with key offerings and call to action">
-    <div class="hero-overlay"></div>
-    <div class="hero-content container">
-      <h2>Save on Your Microsoft 365 & Azure Subscriptions</h2>
-      <p>Thanks to our Microsoft Partnership, get up to 30% off your current plans with the same features and service.</p>
-      <button class="btn-primary hero-btn" onclick="scrollToContact()">Schedule a Free Consultation</button>
-    </div>
   </header>
 
-  <section class="specialties" id="specialties" tabindex="-1" aria-label="Our Specialties section highlighting key services">
+  <section class="hero" id="home" aria-label="Hero section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h2>Save on Your Microsoft 365 & Azure Subscriptions</h2>
+      <p>Thanks to our Microsoft Partnership, get up to <strong>30% off</strong> your current plans with the same features and service.</p>
+      <a href="#contact" class="btn-primary hero-btn">Schedule a Free Consultation</a>
+    </div>
+  </section>
+
+  <section class="specialties" id="specialties" aria-labelledby="specialties-title">
     <div class="container">
-      <h3>Our Specialties</h3>
+      <h3 id="specialties-title">Our Specialties</h3>
       <div class="specialties-grid">
-        <article class="specialty-card" tabindex="0" aria-describedby="m365-desc">
-          <img src="assets/icons/microsoft365.svg" alt="Microsoft 365 & Azure Licensing Icon" class="icon" />
+
+        <article class="specialty-card" tabindex="0" aria-describedby="desc-m365">
+          <div class="icon" aria-hidden="true">
+            <svg width="48" height="48" fill="#0078D7" viewBox="0 0 24 24"><rect width="11" height="11" x="1" y="1"/><rect width="11" height="11" x="12" y="1" fill="#F25022"/><rect width="11" height="11" x="1" y="12" fill="#7FBA00"/><rect width="11" height="11" x="12" y="12" fill="#FFB900"/></svg>
+          </div>
           <h4>Microsoft 365 & Azure Licensing</h4>
-          <p id="m365-desc">Leverage our Microsoft partnership to get unbeatable pricing on your M365 and Azure licenses — identical plans, lower cost.</p>
+          <p id="desc-m365">Leverage our Microsoft partnership to get unbeatable pricing on your M365 and Azure licenses — identical plans, lower cost.</p>
         </article>
-        <article class="specialty-card" tabindex="0" aria-describedby="security-desc">
-          <img src="assets/icons/security.svg" alt="Cloud & Endpoint Security Icon" class="icon" />
+
+        <article class="specialty-card" tabindex="0" aria-describedby="desc-security">
+          <div class="icon" aria-hidden="true">
+            <svg width="48" height="48" fill="#005A9E" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5 3 9 9 11 6-2 9-6 9-11V5l-9-4z"/></svg>
+          </div>
           <h4>Cloud & Endpoint Security</h4>
-          <p id="security-desc">Protect your business with cutting-edge security solutions for cloud environments and endpoint devices.</p>
+          <p id="desc-security">Protect your business with cutting-edge security solutions for cloud environments and endpoint devices.</p>
         </article>
-        <article class="specialty-card" tabindex="0" aria-describedby="thirdparty-desc">
-          <img src="assets/icons/software.svg" alt="Third-Party Software Licenses Icon" class="icon" />
+
+        <article class="specialty-card" tabindex="0" aria-describedby="desc-thirdparty">
+          <div class="icon" aria-hidden="true">
+            <svg width="48" height="48" fill="#0078D7" viewBox="0 0 24 24"><path d="M3 3h18v18H3z" fill="none"/><path d="M3 3h18v18H3z" fill="none"/><rect x="6" y="6" width="12" height="12" rx="2" ry="2"/></svg>
+          </div>
           <h4>Third-Party Software Licenses</h4>
-          <p id="thirdparty-desc">We offer competitive licenses for industry-leading software like Adobe, BitTitan, and more, tailored to your needs.</p>
+          <p id="desc-thirdparty">We offer competitive licenses for industry-leading software like Adobe, BitTitan, and more, tailored to your needs.</p>
         </article>
-        <article class="specialty-card" tabindex="0" aria-describedby="hardware-desc">
-          <img src="assets/icons/hardware.svg" alt="Hardware Solutions Icon" class="icon" />
+
+        <article class="specialty-card" tabindex="0" aria-describedby="desc-hardware">
+          <div class="icon" aria-hidden="true">
+            <svg width="48" height="48" fill="#004C8C" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none"/><path d="M7 7h10v10H7z"/></svg>
+          </div>
           <h4>Hardware Solutions</h4>
-          <p id="hardware-desc">From desktops to servers and peripherals, get quality hardware at discounted prices, bundled with expert support.</p>
+          <p id="desc-hardware">From desktops to servers and peripherals, get quality hardware at discounted prices, bundled with expert support.</p>
         </article>
+
       </div>
     </div>
   </section>
 
-  <section class="about" id="about" tabindex="-1" aria-label="About Shadowgrid Solutions company overview">
+  <section class="about" id="about" aria-labelledby="about-title">
     <div class="container">
-      <h3>About Shadowgrid Solutions</h3>
+      <h3 id="about-title">About Shadowgrid Solutions</h3>
       <p>Shadowgrid Solutions partners with businesses to optimize their IT investments — saving costs on licenses and hardware without compromising service quality. Our expertise spans Microsoft technologies and a broad portfolio of trusted software and hardware vendors.</p>
       <p>We pride ourselves on transparent pricing, personalized service, and delivering measurable savings to help your business grow.</p>
     </div>
   </section>
 
-  <section class="contact" id="contact" tabindex="-1" aria-label="Contact Shadowgrid Solutions for inquiries or consultation">
+  <section class="contact" id="contact" aria-labelledby="contact-title">
     <div class="container contact-container">
-      <h3>Get In Touch</h3>
-      <form id="contact-form" class="contact-form" aria-label="Contact form">
+      <h3 id="contact-title">Get In Touch</h3>
+      <form class="contact-form" novalidate id="contactForm">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" required aria-required="true" />
-        
+        <input type="text" id="name" name="name" placeholder="Your full name" required />
+
         <label for="company">Company</label>
-        <input type="text" id="company" name="company" />
-        
+        <input type="text" id="company" name="company" placeholder="Your company name" required />
+
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required aria-required="true" />
-        
+        <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
-        
+        <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+
         <button type="submit" class="btn-primary">Request a Call</button>
       </form>
       <aside class="contact-info" aria-label="Contact information">
-        <p><strong>Phone:</strong> <a href="tel:+442039677622">0203 967 7622</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@shadowgridsolutions.co.uk">info@shadowgridsolutions.co.uk</a></p>
-        <p><strong>Sales:</strong> <a href="mailto:sales@shadowgridsolutions.co.uk">sales@shadowgridsolutions.co.uk</a></p>
-        <p><strong>Companies House Number:</strong> 16527977</p>
+        <p>📞 Phone: <a href="tel:+442039677622">020 3967 7622</a></p>
+        <p>📧 Email: <a href="mailto:info@shadowgridsolutions.co.uk">info@shadowgridsolutions.co.uk</a></p>
+        <p>📧 Sales: <a href="mailto:sales@shadowgridsolutions.co.uk">sales@shadowgridsolutions.co.uk</a></p>
       </aside>
     </div>
   </section>
 
-  <footer class="footer" aria-label="Footer with copyright info">
-    <div class="footer-container">
-      &copy; 2025 Shadowgrid Solutions. All rights reserved.
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-container">
+      <p>© 2025 Shadowgrid Solutions. All rights reserved.</p>
+      <p>Companies House Number: 16527977</p>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
-    emailjs.init('YOUR_EMAILJS_USER_ID'); // Replace with your EmailJS user ID
-
-    // Smooth scroll function
-    function smoothScroll(target) {
-      document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Scroll to contact section
-    function scrollToContact() {
-      smoothScroll('#contact');
-    }
-
-    // Hamburger toggle
+    // Navigation toggle for mobile hamburger
     const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
       const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
       hamburger.setAttribute('aria-expanded', !expanded);
-      navMenu.hidden = !navMenu.hidden;
+      navLinks.classList.toggle('nav-open');
     });
 
-    // Close mobile nav on link click
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.setAttribute('aria-expanded', false);
-        navMenu.hidden = true;
+    // EmailJS integration for contact form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Validate form inputs
+      const name = this.name.value.trim();
+      const company = this.company.value.trim();
+      const email = this.email.value.trim();
+      const message = this.message.value.trim();
+
+      if (!name || !company || !email || !message) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      // Send email using EmailJS
+      emailjs.send('service_iibrggl', 'template_qigm78m', {
+        from_name: name,
+        company_name: company,
+        reply_to: email,
+        message: message,
+      })
+      .then(() => {
+        alert('Thank you for contacting Shadowgrid Solutions! We will get back to you shortly.');
+        this.reset();
+      }, (error) => {
+        alert('Oops! Something went wrong. Please try again later.');
+        console.error('EmailJS error:', error);
       });
     });
+  </script>
 
-    // Scroll fade-in animations
-    const fadeElements = document.querySelectorAll('.specialty-card, .about, .contact-container, .hero-content');
-    const observerOptions = {
-      threshold: 0.15
-    };
-    const fadeObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in-up');
-          fadeObserver.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-    fadeElements.forEach(el => fadeObserver.observe(el));
-
-    // Parallax effect for hero background
-    const hero = document.querySelector('.hero');
-    window.addEventListener('scroll', () => {
-      let offset = window.pageYOffset;
-      hero.style.backgroundPositionY = offset * 0.5 + 'px';
-    });
-
-    // EmailJS form submission
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const templateParams = {
-        from_name: this.name.value,
-        company: this.company.value,
-        from_email: this.email.value,
-        message: this.message.value,
-      };
-
-      emailjs.send('YOUR_EMAILJS_SERVICE_ID', 'YOUR_EMAILJS_TEMPLATE_ID', templateParams)
-        .then(() => {
-          alert('Thank you for reaching out! We will get back to you shortly.');
-          this.reset();
-        }, (error) => {
-          alert('Oops! Something went wrong. Please try again later.');
-          console.error('EmailJS error:', error);
-        });
-    });
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init('YOUR_USER_ID_HERE');
+    })();
   </script>
 </body>
 </html>
