@@ -2,109 +2,111 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ShadowGrid Solutions - Empowering Your Digital Future</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Tech Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-
-  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
-      <img src="assets/logo.png" alt="ShadowGrid Solutions" />
+      <img src="assets/logo.png" alt="Company Logo">
+      <div class="company-name">Elite Tech</div>
     </div>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#specialties">Specialties</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="theme-toggle">
+      <i class="fa-solid fa-sun"></i>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+      <i class="fa-solid fa-moon"></i>
+    </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-home">
-    <div class="hero-content">
-      <h1>Empowering Your Business with Next-Level IT Solutions</h1>
-      <p>Innovative technology, scalable cloud services, and secure infrastructure tailored for your growth.</p>
-      <a href="contact.html" class="btn-primary">Request a Free Consultation</a>
+  <section class="hero-home" id="home">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+      <h1>Innovating the Future of Digital</h1>
+      <p>Your partner for performance-driven digital experiences.</p>
+      <a href="#contact" class="btn-primary">Get in Touch</a>
     </div>
   </section>
 
-  <!-- Specialties Section -->
-  <section class="specialties-section">
-    <h2>Our Specialties</h2>
-    <div class="specialties-grid">
-      <div class="specialty-card scroll-animate">
-        <h3>Microsoft 365 & Azure Licensing</h3>
-        <p>Unlock flexible, cost-effective Microsoft 365 and Azure licensing tailored to your unique business needs. Our expert guidance ensures you maximize value and minimize spend without compromising on performance.</p>
+  <section id="specialties">
+    <h2 data-aos="fade-up">Our Specialties</h2>
+    <div class="hover-boxes">
+      <div class="hover-box" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-code fa-2x"></i>
+        <h3>Web Development</h3>
+        <p>Cutting-edge websites and applications built with modern frameworks.</p>
       </div>
-      <div class="specialty-card scroll-animate">
-        <h3>Advanced Security Software</h3>
-        <p>Protect your business with cutting-edge security solutions that safeguard your cloud infrastructure and endpoints. From threat detection to compliance, we deliver robust defenses that give you peace of mind.</p>
+      <div class="hover-box" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-solid fa-paintbrush fa-2x"></i>
+        <h3>UI/UX Design</h3>
+        <p>Stunning user interfaces with a focus on usability and engagement.</p>
       </div>
-      <div class="specialty-card scroll-animate">
-        <h3>Hardware Solutions</h3>
-        <p>Equip your team with reliable, high-performance hardware tailored for today’s demanding IT environments. From desktops to servers, we source and configure equipment that drives productivity and uptime.</p>
+      <div class="hover-box" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-solid fa-cloud fa-2x"></i>
+        <h3>Cloud Integration</h3>
+        <p>Seamless migration and optimization across leading cloud platforms.</p>
       </div>
-      <div class="specialty-card scroll-animate">
-        <h3>Comprehensive Third-Party Software Licensing</h3>
-        <p>Access a broad portfolio of third-party software licenses, including Adobe and more. Streamline procurement and reduce costs with our trusted vendor partnerships and expert license management.</p>
+      <div class="hover-box" data-aos="fade-up" data-aos-delay="400">
+        <i class="fa-solid fa-robot fa-2x"></i>
+        <h3>AI & Automation</h3>
+        <p>Smart solutions that empower your business with intelligent systems.</p>
+      </div>
+      <div class="hover-box" data-aos="fade-up" data-aos-delay="500">
+        <i class="fa-solid fa-shield-alt fa-2x"></i>
+        <h3>Cybersecurity</h3>
+        <p>Robust encryption, threat detection, and data protection.</p>
+      </div>
+      <div class="hover-box" data-aos="fade-up" data-aos-delay="600">
+        <i class="fa-solid fa-mobile-screen-button fa-2x"></i>
+        <h3>Mobile Apps</h3>
+        <p>High-performance, responsive applications users love.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <section id="contact">
+    <h2 data-aos="fade-up">Contact Us</h2>
+    <div class="contact-section" data-aos="fade-up" data-aos-delay="200">
+      <form class="contact-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your full name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your email address" required />
+        <label for="message">Message</label>
+        <textarea id="message" rows="6" placeholder="Tell us what you need..." required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p><i class="fa-solid fa-envelope"></i> <a href="mailto:contact@elitetech.com">contact@elitetech.com</a></p>
+        <p><i class="fa-solid fa-phone"></i> +1 (555) 123-4567</p>
+        <p><i class="fa-solid fa-map-marker-alt"></i> 1234 Innovation Drive, San Francisco, CA</p>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer">
-    <div class="footer-content">
-      <p>© 2025 ShadowGrid Solutions</p>
-      <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
-      </div>
-    </div>
+    <p>&copy; 2025 Elite Tech Solutions. All rights reserved.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    // Scroll Animation JS
-    const scrollElements = document.querySelectorAll(".scroll-animate");
-
-    const elementInView = (el, dividend = 1.25) => {
-      const elementTop = el.getBoundingClientRect().top;
-      return (
-        elementTop <=
-        (window.innerHeight || document.documentElement.clientHeight) / dividend
-      );
-    };
-
-    const displayScrollElement = (element) => {
-      element.classList.add("scrolled");
-    };
-
-    const hideScrollElement = (element) => {
-      element.classList.remove("scrolled");
-    };
-
-    const handleScrollAnimation = () => {
-      scrollElements.forEach((el) => {
-        if (elementInView(el, 1.25)) {
-          displayScrollElement(el);
-        } else {
-          hideScrollElement(el);
-        }
-      });
-    };
-
-    window.addEventListener("scroll", () => {
-      handleScrollAnimation();
-    });
-
-    // Trigger animation on page load for elements already in view
-    window.addEventListener("load", () => {
-      handleScrollAnimation();
+    AOS.init();
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('light-mode');
     });
   </script>
 </body>
