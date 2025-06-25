@@ -3,69 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us - Your Business Name</title>
+  <title>About Us - ShadowGrid Solutions</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="navbar" role="banner">
-    <a href="index.html" class="logo" aria-label="Your Business Name Home">
-      <img src="assets/logo.svg" alt="Your Business Logo" />
-    </a>
-    <nav role="navigation" aria-label="Primary navigation">
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="ShadowGrid Solutions" />
+      <span class="company-name">ShadowGrid Solutions</span>
+    </div>
+    <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="about-intro fade-in-up" tabindex="-1">
-      <h1>About Your Business Name</h1>
-      <p>We are committed to delivering exceptional solutions that help businesses thrive in a digital world. Founded in 2010, our mission is to drive innovation and create value for our clients.</p>
+  <main class="about-container">
+    <section class="about-hero">
+      <h1>Who We Are</h1>
+      <p>At ShadowGrid Solutions, we are dedicated to empowering businesses with next-generation IT software and hardware solutions. Trusted by enterprises and growing companies alike, we combine deep technical expertise with a customer-centric approach to deliver unmatched value.</p>
     </section>
 
-    <section class="our-mission fade-in-up" tabindex="-1" style="transition-delay: 0.2s;">
+    <section class="about-mission">
       <h2>Our Mission</h2>
-      <p>To empower businesses by providing transformative technology and expert guidance, enabling them to succeed and grow in their markets.</p>
+      <p>We strive to be your trusted technology partner, providing innovative, scalable, and secure solutions tailored precisely to your business needs. Our mission is to help you reduce costs, enhance security, and accelerate growth through world-class IT services.</p>
     </section>
 
-    <section class="our-team fade-in-up" tabindex="-1" style="transition-delay: 0.4s;">
-      <h2>Meet Our Team</h2>
-      <p>Our diverse team of industry experts combines technical skills and creativity to deliver exceptional results tailored to each client’s needs.</p>
+    <section class="about-values">
+      <h2>Our Core Values</h2>
+      <ul>
+        <li><strong>Excellence:</strong> We deliver nothing less than the highest quality and professionalism in every engagement.</li>
+        <li><strong>Integrity:</strong> Transparent, honest communication is the foundation of every relationship we build.</li>
+        <li><strong>Innovation:</strong> Staying ahead of technology trends ensures you always benefit from the best solutions.</li>
+        <li><strong>Customer Focus:</strong> Your success is our priority; we tailor every solution to your unique challenges.</li>
+      </ul>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Your Business Name. All rights reserved.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="terms.html">Terms of Service</a>
-    </p>
+  <footer class="footer">
+    <p>© 2025 ShadowGrid Solutions</p>
   </footer>
 
-  <script>
-    // Scroll fade-in animation script
-    document.addEventListener('DOMContentLoaded', () => {
-      const faders = document.querySelectorAll('.fade-in-up');
-      const options = {
-        threshold: 0.1,
-      };
-      const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('visible');
-          appearOnScroll.unobserve(entry.target);
-        });
-      }, options);
-
-      faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-      });
-    });
-  </script>
 </body>
 </html>
