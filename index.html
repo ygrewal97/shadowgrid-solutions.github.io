@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ShadowGrid Solutions – Elevating Your Digital Future</title>
+  <title>ShadowGrid Solutions - Empowering Your Digital Future</title>
   <link rel="stylesheet" href="assets/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- Navbar -->
-  <header class="navbar">
+  <header class="navbar" role="banner">
     <div class="logo">
-      <img src="assets/logo.png" alt="ShadowGrid Solutions" />
+      <a href="index.html" aria-label="ShadowGrid Solutions Home">
+        <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
+      </a>
     </div>
-    <nav>
+    <nav role="navigation" aria-label="Primary Navigation">
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -25,55 +27,56 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-overlay">
-      <div class="hero-content">
-        <h1>Empowering Your Business with Next-Level IT</h1>
-        <p>We deliver secure cloud solutions, scalable infrastructure, and modern collaboration tools to drive your growth.</p>
-        <a href="contact.html" class="btn-primary">Get a Free Consultation</a>
+  <main>
+    <section class="hero-home" role="region" aria-labelledby="hero-title">
+      <div class="hero-content" tabindex="0">
+        <h1 id="hero-title">Empowering Your Business with Next-Level IT Solutions</h1>
+        <p>Innovative technology, scalable cloud services, and secure infrastructure tailored for your growth.</p>
+        <a href="contact.html" class="btn-primary" role="button" aria-label="Request a Free Consultation">Request a Free Consultation</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Services Preview -->
-  <section class="services-preview">
-    <h2>What We Do Best</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <img src="assets/icons/m365.svg" alt="Microsoft 365">
-        <h3>Microsoft 365</h3>
-        <p>Empower your team with collaboration tools and integrated productivity suites.</p>
+    <!-- Services Preview Section -->
+    <section class="services-preview" role="region" aria-labelledby="services-title">
+      <h2 id="services-title">What We Offer</h2>
+      <div class="service-cards">
+        <article class="service-card" tabindex="0" role="article" aria-label="Microsoft 365 Service">
+          <img src="assets/icons/m365.svg" alt="Microsoft 365 Icon" />
+          <h3>Microsoft 365</h3>
+          <p>Collaboration tools and productivity suites to empower your team.</p>
+        </article>
+        <article class="service-card" tabindex="0" role="article" aria-label="Azure Cloud Service">
+          <img src="assets/icons/azure.svg" alt="Azure Cloud Icon" />
+          <h3>Azure Cloud</h3>
+          <p>Flexible, scalable cloud solutions for modern business demands.</p>
+        </article>
+        <article class="service-card" tabindex="0" role="article" aria-label="Security Solutions Service">
+          <img src="assets/icons/security.svg" alt="Security Solutions Icon" />
+          <h3>Security Solutions</h3>
+          <p>Comprehensive protection from cyber threats and data breaches.</p>
+        </article>
       </div>
-      <div class="service-card">
-        <img src="assets/icons/azure.svg" alt="Azure Cloud">
-        <h3>Azure Cloud</h3>
-        <p>Scalable, flexible cloud solutions built for security and speed.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/security.svg" alt="Cybersecurity">
-        <h3>Security Solutions</h3>
-        <p>Advanced protection from cyber threats with proactive monitoring and control.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="cta-banner">
-    <h2>Ready to Transform Your IT Strategy?</h2>
-    <a href="contact.html" class="btn-secondary">Speak with an Expert</a>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="footer-content">
-      <p>&copy; 2025 ShadowGrid Solutions. All rights reserved.</p>
-      <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
+      <p>© 2025 ShadowGrid Solutions</p>
+      <div class="social-icons" aria-label="Social Media Links">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
       </div>
     </div>
   </footer>
 
+  <script>
+    // Fade in hero content on page load for smooth effect
+    document.addEventListener('DOMContentLoaded', () => {
+      const hero = document.querySelector('.hero-content');
+      hero.style.opacity = '1';
+    });
+  </script>
 </body>
 </html>
