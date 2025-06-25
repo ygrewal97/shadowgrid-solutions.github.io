@@ -3,92 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Our Services - ShadowGrid Solutions</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <title>Services | ShadowGrid Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/logo.png" alt="ShadowGrid Solutions" />
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="navbar" role="banner">
+  <a href="index.html" class="logo" aria-label="ShadowGrid Solutions Home">
+    <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
+  </a>
+  <nav role="navigation" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Page Banner -->
-  <section class="page-hero">
-    <div class="page-hero-content">
-      <h1>Our Services</h1>
-      <p>Tailored technology solutions to elevate your business performance.</p>
-    </div>
+<main>
+  <section class="services-overview fade-in-up" style="max-width: 1000px; margin: 100px auto 60px; padding: 0 30px;">
+    <h1>Comprehensive IT Services Crafted for Your Success</h1>
+    <p>From cloud migration to cybersecurity and ongoing support, our end-to-end IT services ensure your infrastructure is secure, scalable, and optimized for peak performance.</p>
   </section>
 
-  <!-- Services Section -->
-  <section class="services-full">
-    <div class="container">
-      <div class="service-block">
-        <img src="assets/icons/m365.svg" alt="Microsoft 365" />
-        <div>
-          <h2>Microsoft 365 Solutions</h2>
-          <p>Empower your workforce with integrated Microsoft 365 tools — email, collaboration, security, and more — expertly configured for maximum productivity and minimal hassle.</p>
-        </div>
-      </div>
-
-      <div class="service-block reverse">
-        <img src="assets/icons/azure.svg" alt="Azure Cloud" />
-        <div>
-          <h2>Azure Cloud Services</h2>
-          <p>Deploy scalable, flexible infrastructure on Microsoft Azure. From virtual desktops to hybrid cloud setups, we help you migrate and manage with ease and efficiency.</p>
-        </div>
-      </div>
-
-      <div class="service-block">
-        <img src="assets/icons/security.svg" alt="Cybersecurity" />
-        <div>
-          <h2>Cybersecurity & Compliance</h2>
-          <p>Protect your data, clients, and business continuity with our advanced security solutions. We implement industry-best practices tailored to your environment and compliance needs.</p>
-        </div>
-      </div>
-
-      <div class="service-block reverse">
-        <img src="assets/icons/support.svg" alt="IT Support" />
-        <div>
-          <h2>Managed IT Support</h2>
-          <p>Round-the-clock monitoring, remote assistance, and proactive IT support keep your systems running smoothly — so you can focus on growth, not glitches.</p>
-        </div>
-      </div>
+  <section class="services-preview fade-in-up" aria-label="Services Details" style="max-width: 1100px; margin: 0 auto 100px;">
+    <div class="service-cards">
+      <article class="service-card" tabindex="0">
+        <img src="assets/cloud-icon.svg" alt="Cloud Migration Icon" />
+        <h3>Cloud Migration</h3>
+        <p>We ensure a seamless and secure migration to cloud platforms with minimal disruption and maximum scalability.</p>
+      </article>
+      <article class="service-card" tabindex="0">
+        <img src="assets/cybersecurity-icon.svg" alt="Cybersecurity Icon" />
+        <h3>Cybersecurity</h3>
+        <p>Our advanced cybersecurity measures protect your business from evolving threats and maintain compliance.</p>
+      </article>
+      <article class="service-card" tabindex="0">
+        <img src="assets/support-icon.svg" alt="IT Support Icon" />
+        <h3>IT Support</h3>
+        <p>Dedicated 24/7 IT support ensuring your systems are always up and running smoothly.</p>
+      </article>
     </div>
   </section>
+</main>
 
-  <!-- Call to Action -->
-  <section class="cta-section">
-    <h2>Ready to Upgrade Your IT?</h2>
-    <p>Let’s design a custom solution that fits your business goals.</p>
-    <a href="contact.html" class="btn-primary">Get in Touch</a>
-  </section>
+<footer role="contentinfo">
+  <p>© 2025 ShadowGrid Solutions. All rights reserved.</p>
+  <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+</footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>© 2025 ShadowGrid Solutions</p>
-      <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
-      </div>
-    </div>
-  </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.fade-in-up');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
 
 </body>
 </html>
