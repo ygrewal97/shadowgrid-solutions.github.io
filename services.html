@@ -3,72 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services | ShadowGrid Solutions</title>
+  <title>Services - Your Business Name</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <header class="navbar" role="banner">
+    <a href="index.html" class="logo" aria-label="Your Business Name Home">
+      <img src="assets/logo.svg" alt="Your Business Logo" />
+    </a>
+    <nav role="navigation" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header class="navbar" role="banner">
-  <a href="index.html" class="logo" aria-label="ShadowGrid Solutions Home">
-    <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
-  </a>
-  <nav role="navigation" aria-label="Primary navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html" class="active" aria-current="page">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <section class="services-intro fade-in-up" tabindex="-1">
+      <h1>Our Professional Services</h1>
+      <p>We provide a wide range of services designed to help your business excel and innovate in today's competitive market.</p>
+    </section>
 
-<main>
-  <section class="services-overview fade-in-up" style="max-width: 1000px; margin: 100px auto 60px; padding: 0 30px;">
-    <h1>Comprehensive IT Services Crafted for Your Success</h1>
-    <p>From cloud migration to cybersecurity and ongoing support, our end-to-end IT services ensure your infrastructure is secure, scalable, and optimized for peak performance.</p>
-  </section>
+    <section class="services-list fade-in-up" tabindex="-1" style="transition-delay: 0.2s;">
+      <div class="service-cards">
+        <article class="service-card" tabindex="0" aria-label="Service: Consulting">
+          <img src="assets/icons/consulting.svg" alt="Consulting Icon" />
+          <h3>Consulting</h3>
+          <p>Strategic guidance to optimize your business operations and growth plans.</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Service: Software Development">
+          <img src="assets/icons/development.svg" alt="Development Icon" />
+          <h3>Software Development</h3>
+          <p>Custom software tailored to meet your unique business challenges and goals.</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Service: IT Support">
+          <img src="assets/icons/support.svg" alt="Support Icon" />
+          <h3>IT Support</h3>
+          <p>Comprehensive support and maintenance to keep your technology running flawlessly.</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Service: Cloud Solutions">
+          <img src="assets/icons/cloud.svg" alt="Cloud Icon" />
+          <h3>Cloud Solutions</h3>
+          <p>Innovative cloud-based services that enhance efficiency and scalability.</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Service: Cybersecurity">
+          <img src="assets/icons/cybersecurity.svg" alt="Cybersecurity Icon" />
+          <h3>Cybersecurity</h3>
+          <p>Protect your business with our advanced security solutions and monitoring.</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Service: Data Analytics">
+          <img src="assets/icons/analytics.svg" alt="Analytics Icon" />
+          <h3>Data Analytics</h3>
+          <p>Leverage data insights to drive smarter decisions and business strategies.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-  <section class="services-preview fade-in-up" aria-label="Services Details" style="max-width: 1100px; margin: 0 auto 100px;">
-    <div class="service-cards">
-      <article class="service-card" tabindex="0">
-        <img src="assets/cloud-icon.svg" alt="Cloud Migration Icon" />
-        <h3>Cloud Migration</h3>
-        <p>We ensure a seamless and secure migration to cloud platforms with minimal disruption and maximum scalability.</p>
-      </article>
-      <article class="service-card" tabindex="0">
-        <img src="assets/cybersecurity-icon.svg" alt="Cybersecurity Icon" />
-        <h3>Cybersecurity</h3>
-        <p>Our advanced cybersecurity measures protect your business from evolving threats and maintain compliance.</p>
-      </article>
-      <article class="service-card" tabindex="0">
-        <img src="assets/support-icon.svg" alt="IT Support Icon" />
-        <h3>IT Support</h3>
-        <p>Dedicated 24/7 IT support ensuring your systems are always up and running smoothly.</p>
-      </article>
-    </div>
-  </section>
-</main>
+  <footer>
+    <p>&copy; 2025 Your Business Name. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Service</a>
+    </p>
+  </footer>
 
-<footer role="contentinfo">
-  <p>© 2025 ShadowGrid Solutions. All rights reserved.</p>
-  <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-</footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.fade-in-up');
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
+  <script>
+    // Scroll fade-in animation script
+    document.addEventListener('DOMContentLoaded', () => {
+      const faders = document.querySelectorAll('.fade-in-up');
+      const options = {
+        threshold: 0.1,
+      };
+      const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    elements.forEach(el => observer.observe(el));
-  });
-</script>
+          appearOnScroll.unobserve(entry.target);
+        });
+      }, options);
 
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
 </body>
 </html>
