@@ -3,89 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us | ShadowGrid Solutions</title>
+  <title>About Us - Your Business Name</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <header class="navbar" role="banner">
+    <a href="index.html" class="logo" aria-label="Your Business Name Home">
+      <img src="assets/logo.svg" alt="Your Business Logo" />
+    </a>
+    <nav role="navigation" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header class="navbar" role="banner">
-  <a href="index.html" class="logo" aria-label="ShadowGrid Solutions Home">
-    <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
-  </a>
-  <nav role="navigation" aria-label="Primary navigation">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <section class="about-intro fade-in-up" tabindex="-1">
+      <h1>About Your Business Name</h1>
+      <p>We are committed to delivering exceptional solutions that help businesses thrive in a digital world. Founded in 2010, our mission is to drive innovation and create value for our clients.</p>
+    </section>
 
-<main>
-  <section class="about-intro fade-in-up" aria-label="About ShadowGrid Solutions" style="max-width:900px; margin: 100px auto 60px; padding: 0 30px;">
-    <h1>About ShadowGrid Solutions</h1>
-    <p>Founded on the principles of innovation, integrity, and excellence, we deliver bespoke IT strategies that drive measurable results. Our expert team is passionate about empowering clients with technology tailored to their unique challenges and ambitions.</p>
-  </section>
+    <section class="our-mission fade-in-up" tabindex="-1" style="transition-delay: 0.2s;">
+      <h2>Our Mission</h2>
+      <p>To empower businesses by providing transformative technology and expert guidance, enabling them to succeed and grow in their markets.</p>
+    </section>
 
-  <section class="faq fade-in-up" aria-label="Frequently Asked Questions">
-    <h2>Frequently Asked Questions</h2>
-    <dl>
-      <dt tabindex="0">What industries do you specialize in?</dt>
-      <dd>We work across diverse sectors including finance, healthcare, retail, and technology.</dd>
+    <section class="our-team fade-in-up" tabindex="-1" style="transition-delay: 0.4s;">
+      <h2>Meet Our Team</h2>
+      <p>Our diverse team of industry experts combines technical skills and creativity to deliver exceptional results tailored to each client’s needs.</p>
+    </section>
+  </main>
 
-      <dt tabindex="0">How do you ensure data security?</dt>
-      <dd>Our cybersecurity solutions employ industry-leading practices, including encryption, monitoring, and compliance standards.</dd>
+  <footer>
+    <p>&copy; 2025 Your Business Name. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Service</a>
+    </p>
+  </footer>
 
-      <dt tabindex="0">Can you support remote teams?</dt>
-      <dd>Absolutely! We offer cloud services and collaboration tools designed for seamless remote work.</dd>
-    </dl>
-  </section>
-</main>
-
-<footer role="contentinfo">
-  <p>© 2025 ShadowGrid Solutions. All rights reserved.</p>
-  <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-</footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Scroll animations
-    const elements = document.querySelectorAll('.fade-in-up');
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
+  <script>
+    // Scroll fade-in animation script
+    document.addEventListener('DOMContentLoaded', () => {
+      const faders = document.querySelectorAll('.fade-in-up');
+      const options = {
+        threshold: 0.1,
+      };
+      const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    elements.forEach(el => observer.observe(el));
+          appearOnScroll.unobserve(entry.target);
+        });
+      }, options);
 
-    // FAQ toggle
-    const faqQuestions = document.querySelectorAll('.faq dt');
-    faqQuestions.forEach(dt => {
-      dt.addEventListener('click', () => {
-        const open = dt.classList.toggle('open');
-        const dd = dt.nextElementSibling;
-        if(open) {
-          dd.classList.add('open');
-          dt.setAttribute('aria-expanded', 'true');
-        } else {
-          dd.classList.remove('open');
-          dt.setAttribute('aria-expanded', 'false');
-        }
-      });
-      dt.addEventListener('keypress', (e) => {
-        if(e.key === 'Enter' || e.key === ' ') {
-          dt.click();
-          e.preventDefault();
-        }
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
       });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
