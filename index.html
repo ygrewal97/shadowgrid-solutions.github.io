@@ -3,80 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ShadowGrid Solutions - Empowering Your Digital Future</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <title>ShadowGrid Solutions | Empowering Your Digital Transformation</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar" role="banner">
-    <div class="logo">
-      <a href="index.html" aria-label="ShadowGrid Solutions Home">
-        <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
-      </a>
+<header class="navbar" role="banner">
+  <a href="index.html" class="logo" aria-label="ShadowGrid Solutions Home">
+    <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
+  </a>
+  <nav role="navigation" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero-home fade-in-up" role="region" aria-label="Hero banner">
+    <div class="hero-content">
+      <h1>Empowering Your Digital Transformation</h1>
+      <p>Leverage innovative IT solutions, scalable cloud infrastructure, and dedicated support tailored to fuel your business growth.</p>
+      <a href="services.html" class="btn-primary">Discover Our Services</a>
     </div>
-    <nav role="navigation" aria-label="Primary Navigation">
-      <ul>
-        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  </section>
 
-  <!-- Hero Section -->
-  <main>
-    <section class="hero-home" role="region" aria-labelledby="hero-title">
-      <div class="hero-content" tabindex="0">
-        <h1 id="hero-title">Empowering Your Business with Next-Level IT Solutions</h1>
-        <p>Innovative technology, scalable cloud services, and secure infrastructure tailored for your growth.</p>
-        <a href="contact.html" class="btn-primary" role="button" aria-label="Request a Free Consultation">Request a Free Consultation</a>
-      </div>
-    </section>
-
-    <!-- Services Preview Section -->
-    <section class="services-preview" role="region" aria-labelledby="services-title">
-      <h2 id="services-title">What We Offer</h2>
-      <div class="service-cards">
-        <article class="service-card" tabindex="0" role="article" aria-label="Microsoft 365 Service">
-          <img src="assets/icons/m365.svg" alt="Microsoft 365 Icon" />
-          <h3>Microsoft 365</h3>
-          <p>Collaboration tools and productivity suites to empower your team.</p>
-        </article>
-        <article class="service-card" tabindex="0" role="article" aria-label="Azure Cloud Service">
-          <img src="assets/icons/azure.svg" alt="Azure Cloud Icon" />
-          <h3>Azure Cloud</h3>
-          <p>Flexible, scalable cloud solutions for modern business demands.</p>
-        </article>
-        <article class="service-card" tabindex="0" role="article" aria-label="Security Solutions Service">
-          <img src="assets/icons/security.svg" alt="Security Solutions Icon" />
-          <h3>Security Solutions</h3>
-          <p>Comprehensive protection from cyber threats and data breaches.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer" role="contentinfo">
-    <div class="footer-content">
-      <p>© 2025 ShadowGrid Solutions</p>
-      <div class="social-icons" aria-label="Social Media Links">
-        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a>
-        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
-      </div>
+  <section class="services-preview fade-in-up" aria-label="Our Services">
+    <h2>Our Core Services</h2>
+    <div class="service-cards">
+      <article class="service-card" tabindex="0">
+        <img src="assets/cloud-icon.svg" alt="Cloud Migration Icon" />
+        <h3>Cloud Migration</h3>
+        <p>Seamlessly transition your operations to secure and scalable cloud platforms, minimizing downtime.</p>
+      </article>
+      <article class="service-card" tabindex="0">
+        <img src="assets/cybersecurity-icon.svg" alt="Cybersecurity Icon" />
+        <h3>Cybersecurity</h3>
+        <p>Protect your data and infrastructure with our cutting-edge security solutions tailored for your business.</p>
+      </article>
+      <article class="service-card" tabindex="0">
+        <img src="assets/support-icon.svg" alt="IT Support Icon" />
+        <h3>IT Support</h3>
+        <p>Reliable, 24/7 IT support to keep your systems running smoothly and efficiently.</p>
+      </article>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // Fade in hero content on page load for smooth effect
-    document.addEventListener('DOMContentLoaded', () => {
-      const hero = document.querySelector('.hero-content');
-      hero.style.opacity = '1';
-    });
-  </script>
+  <section class="testimonials fade-in-up" aria-label="Customer Testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-cards">
+      <blockquote class="testimonial-card" tabindex="0">
+        <p>"ShadowGrid Solutions transformed our IT infrastructure. Their expertise and proactive support have been invaluable."</p>
+        <footer>- Sarah L., CEO, Tech Innovators</footer>
+      </blockquote>
+      <blockquote class="testimonial-card" tabindex="0">
+        <p>"Professional, responsive, and knowledgeable. They understood our business needs and delivered beyond expectations."</p>
+        <footer>- Mark R., CTO, Fintech Corp</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="case-studies fade-in-up" aria-label="Case Studies">
+    <h2>Real Results for Our Clients</h2>
+    <div class="case-study-cards">
+      <article class="case-study-card" tabindex="0">
+        <h3>Cloud Migration for Global Retailer</h3>
+        <p>Reduced costs by 30% while improving scalability and uptime.</p>
+        <a href="#" class="btn-secondary" aria-label="Read more about Cloud Migration case study">Read More</a>
+      </article>
+      <article class="case-study-card" tabindex="0">
+        <h3>Cybersecurity Overhaul for Financial Firm</h3>
+        <p>Prevented breaches and ensured regulatory compliance in a high-risk industry.</p>
+        <a href="#" class="btn-secondary" aria-label="Read more about Cybersecurity case study">Read More</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <p>© 2025 ShadowGrid Solutions. All rights reserved.</p>
+  <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.fade-in-up');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
 </body>
 </html>
