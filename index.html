@@ -2,93 +2,130 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ShadowGrid Solutions Limited</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="preload" href="assets/hero-image.jpg" as="image">
+  
+  <!-- Meta -->
+  <meta name="description" content="ShadowGrid Solutions empowers businesses through Microsoft 365, Azure, Security, and Hardware solutions.">
 </head>
 
 <body>
-
-  <!-- Sticky Navbar with Clean, Simple Navigation -->
+  <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
-      <img src="assets/logo.png" alt="ShadowGrid Solutions">
+      <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
     </div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#hero" aria-current="page">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
   </header>
 
-  <!-- Hero Section with Background Video -->
-  <section class="hero">
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
     <div class="hero-overlay">
       <h1>Empowering Your Business with IT Solutions</h1>
-      <p>Maximize your efficiency with Microsoft 365, Azure, Security Solutions, Hardware, and more</p>
-      <a href="contact.html" class="cta-btn">Request a Free Consultation</a>
+      <p>Maximize your efficiency with Microsoft 365, Azure, Security, and more.</p>
+      <a href="#contact" class="cta-btn">Request a Free Consultation</a>
     </div>
   </section>
 
-  <!-- Services Section with Hover Cards -->
-  <section class="services">
+  <!-- Services -->
+  <section class="services" id="services">
     <h2>Our Expertise</h2>
     <div class="service-cards">
       <div class="service-card">
-        <img src="assets/icons/m365.svg" alt="Microsoft 365">
+        <img src="assets/icons/m365.svg" alt="Microsoft 365 Icon" />
         <h3>Microsoft 365</h3>
-        <p>Unlock the full potential of your team with Microsoft’s powerful tools, tailored to your needs.</p>
+        <p>Boost productivity with Microsoft tools tailored to your workflow.</p>
       </div>
       <div class="service-card">
-        <img src="assets/icons/azure.svg" alt="Azure Cloud">
+        <img src="assets/icons/azure.svg" alt="Azure Icon" />
         <h3>Azure Cloud</h3>
-        <p>Scale effortlessly with Azure's cloud solutions, built to optimize security and performance.</p>
+        <p>Scale efficiently with Microsoft Azure's flexible cloud ecosystem.</p>
       </div>
       <div class="service-card">
-        <img src="assets/icons/security.svg" alt="Security">
+        <img src="assets/icons/security.svg" alt="Security Icon" />
         <h3>Security Solutions</h3>
-        <p>Protect your business with advanced security and endpoint protection services.</p>
+        <p>Fortify your systems with industry-leading protection and monitoring.</p>
       </div>
       <div class="service-card">
-        <img src="assets/icons/hardware.svg" alt="Hardware Solutions">
+        <img src="assets/icons/hardware.svg" alt="Hardware Icon" />
         <h3>Hardware Solutions</h3>
-        <p>Get the best hardware for your business, from servers to workstations, with reliable support.</p>
+        <p>Equip your team with high-performance hardware and support.</p>
       </div>
     </div>
   </section>
 
-  <!-- Client Testimonials Section with Carousel -->
+  <!-- Testimonials -->
   <section class="testimonials">
-    <h2>What Our Clients Are Saying</h2>
+    <h2>What Our Clients Say</h2>
     <div class="testimonial-slider">
-      <div class="testimonial">
-        <p>"ShadowGrid streamlined our Microsoft solutions, saving us time and money while boosting productivity."</p>
+      <div class="testimonial active">
+        <p>"ShadowGrid streamlined our Microsoft solutions. Incredible speed and support."</p>
         <footer>- John Doe, CEO, TechCorp</footer>
       </div>
       <div class="testimonial">
-        <p>"Their Azure migration was seamless and quick. Exceptional support and expertise from start to finish!"</p>
+        <p>"Seamless Azure migration. Their expertise saved us weeks of work!"</p>
         <footer>- Jane Smith, CTO, SecureTech</footer>
       </div>
     </div>
+    <div class="slider-controls">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
   </section>
 
-  <!-- Footer Section with Interactive Social Links -->
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer" id="contact">
     <div class="footer-content">
       <p>© 2025 ShadowGrid Solutions</p>
       <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
   </footer>
 
+  <!-- JavaScript -->
+  <script>
+    // Mobile Nav Toggle
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.navbar').classList.toggle('active');
+    });
+
+    // Testimonials Slider
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+    const showTestimonial = (i) => {
+      testimonials.forEach((t, idx) => {
+        t.classList.toggle('active', idx === i);
+      });
+    };
+    document.getElementById('prev').onclick = () => {
+      index = (index - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(index);
+    };
+    document.getElementById('next').onclick = () => {
+      index = (index + 1) % testimonials.length;
+      showTestimonial(index);
+    };
+  </script>
 </body>
 
 </html>
