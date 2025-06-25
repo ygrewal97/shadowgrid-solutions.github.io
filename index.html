@@ -1,113 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shadowgrid Solutions – Elite IT Software & Hardware Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Lexend+Deca&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shadowgrid Solutions | IT Software & Hardware Solutions</title>
+<link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 
 <header class="navbar">
-  <div class="container navbar-inner">
-    <a href="#" class="logo" aria-label="Shadowgrid Solutions">
-      <img src="assets/logo.png" alt="Shadowgrid Solutions Logo" />
-      <span class="logo-text">
-        Shadowgrid Solutions
-        <small>IT Software & Hardware Solutions</small>
-      </span>
-    </a>
-    <nav aria-label="Primary Navigation">
-      <ul class="nav-links">
-        <li><a href="#specialties" class="nav-link active">Our Specialties</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+  <div class="navbar-inner container">
+    <img src="assets/logo.png" alt="Shadowgrid Solutions Logo" class="logo" />
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="#specialties">Our Specialties</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<main>
-
-<section class="hero" role="banner">
+<section class="hero">
   <div class="hero-overlay"></div>
-  <div class="container hero-content">
-    <h1 class="hero-title">Save up to <span class="highlight">30%</span> on Microsoft 365 & Azure Subscriptions</h1>
+  <div class="hero-content" data-animate="fadeInUp">
+    <h1 class="hero-title">
+      Save on Your <span class="highlight">Microsoft 365</span> & <span class="highlight">Azure Subscriptions</span>
+    </h1>
     <p class="hero-subtitle">
-      Thanks to our exclusive Microsoft partnership, get identical features at unmatched prices.
-      Discover how Shadowgrid Solutions can revolutionize your IT investments.
+      Thanks to our Microsoft Partnership, get up to 30% off your current plans with the same features and service.
     </p>
-    <a href="#contact" class="btn btn-primary" role="button">Schedule a Free Consultation</a>
+    <a href="#contact" class="btn btn-primary">Schedule a Free Consultation</a>
   </div>
   <div class="hero-animated-accent"></div>
 </section>
 
-<section id="specialties" class="specialties">
-  <div class="container">
-    <h2 class="section-heading">Our Specialties</h2>
-    <div class="specialties-grid" role="list">
-
-      <article class="specialty-card" role="listitem" tabindex="0">
-        <h3>Microsoft 365 & Azure Licensing</h3>
-        <p>Unbeatable pricing with the exact plans you already use — save without compromise.</p>
-      </article>
-
-      <article class="specialty-card" role="listitem" tabindex="0">
-        <h3>Cloud & Endpoint Security</h3>
-        <p>Advanced protection solutions designed for modern cloud and device environments.</p>
-      </article>
-
-      <article class="specialty-card" role="listitem" tabindex="0">
-        <h3>Third-Party Software Licenses</h3>
-        <p>Competitive licensing for Adobe, BitTitan, and a broad portfolio of trusted vendors.</p>
-      </article>
-
-      <article class="specialty-card" role="listitem" tabindex="0">
-        <h3>Hardware Solutions</h3>
-        <p>Discounted enterprise-grade desktops, servers, and peripherals with expert support.</p>
-      </article>
-
+<section id="specialties" class="specialties container">
+  <h2 class="section-heading" data-animate="fadeInUp">Our Specialties</h2>
+  <div class="specialties-grid">
+    <div class="specialty-card" tabindex="0" data-animate="fadeInUp" data-delay="100">
+      <img src="assets/icons/licensing.svg" alt="Licensing Icon" class="icon" />
+      <h3>Microsoft 365 & Azure Licensing</h3>
+      <p>
+        Leverage our Microsoft partnership to get unbeatable pricing on your M365 and Azure licenses — identical plans, lower cost.
+      </p>
+    </div>
+    <div class="specialty-card" tabindex="0" data-animate="fadeInUp" data-delay="200">
+      <img src="assets/icons/cloud-security.svg" alt="Security Icon" class="icon" />
+      <h3>Cloud & Endpoint Security</h3>
+      <p>
+        Protect your business with cutting-edge security solutions for cloud environments and endpoint devices.
+      </p>
+    </div>
+    <div class="specialty-card" tabindex="0" data-animate="fadeInUp" data-delay="300">
+      <img src="assets/icons/software.svg" alt="Software Licenses Icon" class="icon" />
+      <h3>Third-Party Software Licenses</h3>
+      <p>
+        We offer competitive licenses for industry-leading software like Adobe, BitTitan, and more, tailored to your needs.
+      </p>
+    </div>
+    <div class="specialty-card" tabindex="0" data-animate="fadeInUp" data-delay="400">
+      <img src="assets/icons/hardware.svg" alt="Hardware Icon" class="icon" />
+      <h3>Hardware Solutions</h3>
+      <p>
+        From desktops to servers and peripherals, get quality hardware at discounted prices, bundled with expert support.
+      </p>
     </div>
   </div>
 </section>
 
-<section id="about" class="about">
-  <div class="container">
-    <h2 class="section-heading">About Shadowgrid Solutions</h2>
-    <p>We’re the trusted partner helping businesses optimize IT spend and infrastructure — leveraging Microsoft technologies and a curated ecosystem of software and hardware vendors.</p>
-    <p>Our mission is transparency, unparalleled service, and measurable savings that fuel your growth.</p>
-  </div>
+<section id="about" class="about container">
+  <h2 class="section-heading" data-animate="fadeInUp">About Shadowgrid Solutions</h2>
+  <p data-animate="fadeInUp" data-delay="100">
+    Shadowgrid Solutions partners with businesses to optimize their IT investments — saving costs on licenses and hardware without compromising service quality. Our expertise spans Microsoft technologies and a broad portfolio of trusted software and hardware vendors.
+  </p>
+  <p data-animate="fadeInUp" data-delay="200">
+    We pride ourselves on transparent pricing, personalized service, and delivering measurable savings to help your business grow.
+  </p>
 </section>
 
-<section id="contact" class="contact">
-  <div class="container">
-    <h2 class="section-heading">Get In Touch</h2>
-    <form class="contact-form" action="#" method="POST" autocomplete="off" aria-label="Contact Form">
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" placeholder="Your full name" required />
-
-      <label for="company">Company</label>
-      <input id="company" name="company" type="text" placeholder="Your company name" required />
-
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="Your email address" required />
-
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
-
-      <button type="submit" class="btn btn-primary">Request a Call</button>
-    </form>
-  </div>
+<section id="contact" class="contact container">
+  <h2 class="section-heading" data-animate="fadeInUp">Get In Touch</h2>
+  <form class="contact-form" action="#" method="POST" data-animate="fadeInUp" data-delay="100" aria-label="Contact form">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" placeholder="Your Name" required />
+    
+    <label for="company">Company</label>
+    <input id="company" name="company" type="text" placeholder="Your Company" required />
+    
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" required />
+    
+    <label for="message">Message</label>
+    <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+    
+    <button type="submit" class="btn btn-primary">Request a Call</button>
+  </form>
 </section>
-
-</main>
 
 <footer class="footer">
-  <div class="container footer-inner">
-    <p>© 2025 Shadowgrid Solutions. All rights reserved.</p>
-  </div>
+  &copy; 2025 Shadowgrid Solutions. All rights reserved.
 </footer>
+
+<script>
+// Simple scroll fade-in animation handler
+document.addEventListener('DOMContentLoaded', () => {
+  const animatedElems = document.querySelectorAll('[data-animate]');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = entry.target.getAttribute('data-delay') || 0;
+        setTimeout(() => {
+          entry.target.classList.add('animate-visible');
+        }, delay);
+      }
+    });
+  }, { threshold: 0.15 });
+  animatedElems.forEach(el => observer.observe(el));
+
+  // Parallax effect on hero background
+  const hero = document.querySelector('.hero');
+  window.addEventListener('scroll', () => {
+    let offset = window.pageYOffset;
+    hero.style.backgroundPosition = `center calc(50% + ${offset * 0.3}px)`;
+  });
+});
+</script>
 
 </body>
 </html>
