@@ -3,9 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ShadowGrid Solutions - Empowering Your Digital Future</title>
+  <title>ShadowGrid Solutions - Empowering Your Business</title>
   <link rel="stylesheet" href="assets/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Full viewport hero with background image */
+    .hero {
+      position: relative;
+      background: url('assets/hero-bg.jpg') center center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    /* Dark overlay for better text contrast */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 59, 92, 0.75);
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .hero-content h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 3.25rem;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .hero-content p {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      color: #d9e4e9;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: #ff7f00;
+      color: #fff;
+      padding: 15px 45px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(255, 127, 0, 0.6);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #e66e00;
+      box-shadow: 0 8px 20px rgba(230, 110, 0, 0.8);
+    }
+
+    /* Navbar tweaks */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 59, 92, 0.85);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    .navbar .logo img {
+      height: 40px;
+    }
+
+    .navbar nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar nav ul li a {
+      color: white;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .navbar nav ul li a:hover,
+    .navbar nav ul li a.active {
+      color: #ff7f00;
+    }
+
+    /* Footer styles */
+    footer.footer {
+      background-color: #003b5c;
+      color: #d9e4e9;
+      text-align: center;
+      padding: 20px 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    footer.footer .social-icons a {
+      color: #d9e4e9;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+
+    footer.footer .social-icons a:hover {
+      color: #ff7f00;
+    }
+  </style>
 </head>
 <body>
 
@@ -24,8 +150,8 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero-home">
+  <!-- Hero Section with text and button -->
+  <section class="hero">
     <div class="hero-content">
       <h1>Empowering Your Business with Next-Level IT Solutions</h1>
       <p>Innovative technology, scalable cloud services, and secure infrastructure tailored for your growth.</p>
@@ -33,37 +159,13 @@
     </div>
   </section>
 
-  <!-- Services Preview Section -->
-  <section class="services-preview">
-    <h2>What We Offer</h2>
-    <div class="service-cards">
-      <div class="service-card">
-        <img src="assets/icons/m365.svg" alt="Microsoft 365" />
-        <h3>Microsoft 365</h3>
-        <p>Collaboration tools and productivity suites to empower your team.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/azure.svg" alt="Azure Cloud" />
-        <h3>Azure Cloud</h3>
-        <p>Flexible, scalable cloud solutions for modern business demands.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/security.svg" alt="Security Solutions" />
-        <h3>Security Solutions</h3>
-        <p>Comprehensive protection from cyber threats and data breaches.</p>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content">
-      <p>© 2025 ShadowGrid Solutions</p>
-      <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
-      </div>
+    <p>© 2025 ShadowGrid Solutions</p>
+    <div class="social-icons">
+      <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+      <a href="https://facebook.com" target="_blank">Facebook</a>
     </div>
   </footer>
 
