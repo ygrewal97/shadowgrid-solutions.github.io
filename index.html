@@ -3,81 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home - Your Business Name</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto&display=swap" rel="stylesheet" />
+  <title>ShadowGrid Solutions - Empowering Your Digital Future</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="navbar" role="banner">
-    <a href="index.html" class="logo" aria-label="Your Business Name Home">
-      <img src="assets/logo.svg" alt="Your Business Logo" />
-    </a>
-    <nav role="navigation" aria-label="Primary navigation">
-      <ul>
-        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero-home fade-in-up" tabindex="-1">
-      <h1>Empowering Your Business with Innovative Solutions</h1>
-      <p>At Your Business Name, we combine expertise and creativity to deliver cutting-edge services tailored to your unique needs.</p>
-      <a href="services.html" class="btn-primary">Explore Our Services</a>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Empowering Your Business with Next-Level IT Solutions</h1>
+      <p>Innovative technology, scalable cloud services, and secure infrastructure tailored for your growth.</p>
+      <a href="contact.html" class="btn-primary">Request a Free Consultation</a>
+    </div>
+  </section>
 
-    <section class="services-preview fade-in-up" tabindex="-1" style="transition-delay: 0.2s;">
-      <h2>Our Core Services</h2>
-      <div class="service-cards">
-        <article class="service-card" tabindex="0" aria-label="Service: Consulting">
-          <img src="assets/icons/consulting.svg" alt="Consulting Icon" />
-          <h3>Consulting</h3>
-          <p>Expert advice and strategy development to help your business grow sustainably.</p>
-        </article>
-        <article class="service-card" tabindex="0" aria-label="Service: Development">
-          <img src="assets/icons/development.svg" alt="Development Icon" />
-          <h3>Development</h3>
-          <p>Custom software solutions built with the latest technology tailored for your needs.</p>
-        </article>
-        <article class="service-card" tabindex="0" aria-label="Service: Support">
-          <img src="assets/icons/support.svg" alt="Support Icon" />
-          <h3>Support</h3>
-          <p>Reliable and proactive support ensuring your systems run smoothly 24/7.</p>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Your Business Name. All rights reserved.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="terms.html">Terms of Service</a>
-    </p>
-  </footer>
-
-  <script>
-    // Scroll fade-in animation script
-    document.addEventListener('DOMContentLoaded', () => {
-      const faders = document.querySelectorAll('.fade-in-up');
-      const options = {
-        threshold: 0.1,
-      };
-      const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('visible');
-          appearOnScroll.unobserve(entry.target);
-        });
-      }, options);
-
-      faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-      });
-    });
-  </script>
-</body>
-</html>
+  <!-- Services Preview -->
+  <section class="services-preview">
+    <div class="container">
+      <h2 class="section-title">What We Offer</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="assets/icons/m365.svg" alt="Microsoft 365" />
+          <h3>Microsoft 365</h3>
