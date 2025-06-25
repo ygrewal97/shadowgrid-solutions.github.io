@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ShadowGrid Solutions - Empowering Your Digital Future</title>
+  <title>BlueWave Solutions - Empower Your Business with Technology</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">
-      <img src="assets/logo.png" alt="ShadowGrid Solutions" />
-    </div>
+    <a href="index.html" class="logo-container" aria-label="BlueWave Solutions Home">
+      <img src="assets/logo.png" alt="BlueWave Solutions Logo" class="logo" />
+      <div class="company-name">
+        <h1>BlueWave Solutions</h1>
+        <p class="tagline">Innovate. Deliver. Excel.</p>
+      </div>
+    </a>
     <nav>
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
@@ -25,71 +29,48 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero-home">
-    <div class="hero-content fade-up">
-      <h1>Empowering Your Business with Next-Level IT Solutions</h1>
-      <p>Innovative technology, scalable cloud services, and secure infrastructure tailored for your growth.</p>
-      <a href="contact.html" class="btn-primary">Request a Free Consultation</a>
+  <section class="hero-home" role="banner" aria-label="Empowering Your Business">
+    <div class="hero-content container">
+      <h1>Empowering Your Business with Cutting-Edge Technology</h1>
+      <p>Partner with us to transform your digital presence and achieve new heights.</p>
+      <a href="#services" class="btn-primary">Explore Our Services</a>
     </div>
+    <div class="scroll-indicator" aria-hidden="true"></div>
   </section>
 
   <!-- Services Preview Section -->
-  <section class="services-preview">
-    <h2 class="fade-up">What We Offer</h2>
+  <section id="services" class="services-preview container" aria-labelledby="services-heading">
+    <h2 id="services-heading">What We Offer</h2>
     <div class="service-cards">
-      <div class="service-card fade-up">
-        <img src="assets/icons/m365.svg" alt="Microsoft 365" />
+      <article class="service-card" tabindex="0" aria-label="Microsoft 365 Services">
+        <img src="assets/icons/m365.svg" alt="Microsoft 365 Icon" />
         <h3>Microsoft 365</h3>
         <p>Collaboration tools and productivity suites to empower your team.</p>
-      </div>
-      <div class="service-card fade-up">
-        <img src="assets/icons/azure.svg" alt="Azure Cloud" />
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Azure Cloud Services">
+        <img src="assets/icons/azure.svg" alt="Azure Cloud Icon" />
         <h3>Azure Cloud</h3>
         <p>Flexible, scalable cloud solutions for modern business demands.</p>
-      </div>
-      <div class="service-card fade-up">
-        <img src="assets/icons/security.svg" alt="Security Solutions" />
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Security Solutions">
+        <img src="assets/icons/security.svg" alt="Security Solutions Icon" />
         <h3>Security Solutions</h3>
         <p>Comprehensive protection from cyber threats and data breaches.</p>
-      </div>
+      </article>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer fade-up">
-    <div class="footer-content">
-      <p>© 2025 ShadowGrid Solutions</p>
-      <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
+  <footer class="footer">
+    <div class="footer-content container">
+      <p>© 2025 BlueWave Solutions. All rights reserved.</p>
+      <div class="social-icons" role="navigation" aria-label="Social Media Links">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
       </div>
     </div>
   </footer>
-
-  <!-- Scroll Animation JS -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const faders = document.querySelectorAll('.fade-up');
-
-      const appearOptions = {
-        threshold: 0.2,
-        rootMargin: '0px 0px -50px 0px',
-      };
-
-      const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('visible');
-          appearOnScroll.unobserve(entry.target);
-        });
-      }, appearOptions);
-
-      faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-      });
-    });
-  </script>
 
 </body>
 </html>
