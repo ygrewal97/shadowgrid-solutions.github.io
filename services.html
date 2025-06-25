@@ -1,60 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Services - ShadowGrid Solutions</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
-      <img src="assets/logo.png" alt="ShadowGrid Solutions">
+      <img src="assets/logo.png" alt="ShadowGrid Solutions" />
     </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section for Services -->
+  <!-- Hero Section -->
   <section class="hero">
     <div class="hero-overlay">
       <h1>Our Services</h1>
-      <p>Providing IT solutions that scale, secure, and drive business growth.</p>
+      <p>Smart. Scalable. Secure. Empowering your digital transformation.</p>
     </div>
   </section>
 
-  <!-- Services Offered -->
-  <section class="services">
-    <h2>Our Expertise</h2>
-    <div class="service-cards">
-      <div class="service-card">
-        <img src="assets/icons/m365.svg" alt="Microsoft 365">
-        <h3>Microsoft 365</h3>
-        <p>Unlock the full potential of your team with Microsoft’s powerful tools, tailored to your needs.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/azure.svg" alt="Azure Cloud">
-        <h3>Azure Cloud</h3>
-        <p>Scale effortlessly with Azure's cloud solutions, built to optimize security and performance.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/security.svg" alt="Security">
-        <h3>Security Solutions</h3>
-        <p>Protect your business with advanced security and endpoint protection services.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/icons/hardware.svg" alt="Hardware Solutions">
-        <h3>Hardware Solutions</h3>
-        <p>Get the best hardware for your business, from servers to workstations, with reliable support.</p>
+  <!-- Services Section -->
+  <section class="services" style="padding: 100px 20px; background: #fff;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <h2 style="text-align: center; font-size: 42px; color: #003B5C; margin-bottom: 60px;">What We Do Best</h2>
+      <div class="service-cards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px;">
+        
+        <div class="service-card" style="text-align: center; padding: 40px; background: #fdfdfd; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); transition: transform 0.3s;">
+          <img src="assets/icons/m365.svg" alt="Microsoft 365" style="width: 60px; height: 60px; margin-bottom: 20px;">
+          <h3 style="font-size: 24px; margin-bottom: 10px;">Microsoft 365</h3>
+          <p style="color: #555;">Empower your workforce with collaboration tools and productivity suites that just work.</p>
+        </div>
+
+        <div class="service-card" style="text-align: center; padding: 40px; background: #fdfdfd; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); transition: transform 0.3s;">
+          <img src="assets/icons/azure.svg" alt="Azure Cloud" style="width: 60px; height: 60px; margin-bottom: 20px;">
+          <h3 style="font-size: 24px; margin-bottom: 10px;">Azure Cloud</h3>
+          <p style="color: #555;">Flexible and scalable cloud solutions designed to meet modern business demands.</p>
+        </div>
+
+        <div class="service-card" style="text-align: center; padding: 40px; background: #fdfdfd; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); transition: transform 0.3s;">
+          <img src="assets/icons/security.svg" alt="Security Solutions" style="width: 60px; height: 60px; margin-bottom: 20px;">
+          <h3 style="font-size: 24px; margin-bottom: 10px;">Security Solutions</h3>
+          <p style="color: #555;">Proactive defense for your data, users, and infrastructure — from firewalls to zero trust.</p>
+        </div>
+
+        <div class="service-card" style="text-align: center; padding: 40px; background: #fdfdfd; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.05); transition: transform 0.3s;">
+          <img src="assets/icons/hardware.svg" alt="Hardware Solutions" style="width: 60px; height: 60px; margin-bottom: 20px;">
+          <h3 style="font-size: 24px; margin-bottom: 10px;">Hardware Solutions</h3>
+          <p style="color: #555;">Premium devices and infrastructure — installed, supported, and maintained by experts.</p>
+        </div>
+
       </div>
     </div>
   </section>
