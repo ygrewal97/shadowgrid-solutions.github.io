@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Us - ShadowGrid Solutions</title>
   <link rel="stylesheet" href="assets/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
@@ -11,70 +11,65 @@
 
   <!-- Navbar -->
   <header class="navbar">
-    <div class="logo">
-      <img src="assets/logo.png" alt="ShadowGrid Solutions" />
+    <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="assets/logo.png" alt="ShadowGrid Solutions" /></a>
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-overlay">
-      <h1>Let’s Connect</h1>
-      <p>Have questions? Need a consultation? We're here to help — let's build something great together.</p>
+  <!-- Contact Hero Section -->
+  <section class="hero" style="background-image: url('assets/contact-hero.jpg'); height: 50vh;">
+    <div class="hero-content container" style="max-width: 700px;">
+      <h1>Get in Touch</h1>
+      <p>We’re here to help you navigate your digital transformation journey.</p>
     </div>
   </section>
 
   <!-- Contact Form Section -->
-  <section class="contact-form" style="padding: 100px 20px; background: #fff;">
-    <div style="max-width: 800px; margin: 0 auto;">
-      <h2 style="text-align: center; font-size: 42px; color: #003B5C; margin-bottom: 40px;">Get in Touch</h2>
-      <form action="submit_form.php" method="POST" style="display: grid; gap: 20px;">
-        
-        <div>
-          <label for="name" style="font-weight: 600;">Name</label>
-          <input type="text" id="name" name="name" required style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;">
-        </div>
+  <section class="container contact-section" style="max-width: 700px; padding: 80px 20px;">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST" class="contact-form" novalidate>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
 
-        <div>
-          <label for="email" style="font-weight: 600;">Email</label>
-          <input type="email" id="email" name="email" required style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;">
-        </div>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
 
-        <div>
-          <label for="phone" style="font-weight: 600;">Phone Number</label>
-          <input type="text" id="phone" name="phone" required style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;">
-        </div>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+1 555 123 4567" />
 
-        <div>
-          <label for="message" style="font-weight: 600;">Message</label>
-          <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 15px; border-radius: 8px; border: 1px solid #ccc; font-size: 16px;"></textarea>
-        </div>
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="How can we assist you?" required></textarea>
 
-        <div style="text-align: center;">
-          <button type="submit" style="padding: 15px 40px; background-color: #ff7f00; border: none; border-radius: 6px; color: white; font-size: 18px; font-weight: bold; transition: all 0.3s;">
-            Send Message
-          </button>
-        </div>
-      </form>
-    </div>
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Contact Info Section -->
+  <section class="container contact-info" style="max-width: 700px; padding-bottom: 80px;">
+    <h3>Our Contact Details</h3>
+    <p>Email: <a href="mailto:contact@shadowgridsolutions.com">contact@shadowgridsolutions.com</a></p>
+    <p>Phone: <a href="tel:+15551234567">+1 555 123 4567</a></p>
+    <p>Address: 1234 Tech Street, Innovation City, USA</p>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content">
+    <div class="footer-content container">
       <p>© 2025 ShadowGrid Solutions</p>
       <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
   </footer>
