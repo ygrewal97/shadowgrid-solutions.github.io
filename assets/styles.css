@@ -1,183 +1,134 @@
-/* General Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* ---- Home Page Hero ---- */
 
-/* Body and base fonts */
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f5f8fb;
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.logo img {
-  height: 50px;
-}
-
-.navbar nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.navbar nav ul li a {
-  text-decoration: none;
-  color: #003B5C;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.navbar nav ul li a:hover,
-.navbar nav ul li a.active {
-  color: #ff7f00;
-}
-
-/* Hero Section */
 .hero-home {
-  padding: 120px 20px;
-  background-color: #f5f8fb;
-  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  background: url('../assets/hero-bg-large.jpg') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 60px;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-home::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 59, 92, 0.75); /* dark overlay */
+  z-index: 0;
+}
+
+.hero-home .hero-content {
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
 }
 
 .hero-home h1 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  color: #003B5C;
+  font-size: 3.5rem;
+  line-height: 1.2;
   margin-bottom: 20px;
 }
 
 .hero-home p {
-  font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
-  color: #555;
   margin-bottom: 40px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #f0f0f0;
 }
 
 .btn-primary {
+  display: inline-block;
   background-color: #ff7f00;
-  color: white !important;
-  padding: 15px 40px;
+  color: white;
+  padding: 16px 36px;
   border-radius: 8px;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem;
+  font-size: 18px;
+  box-shadow: 0 6px 15px rgba(255, 127, 0, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #e76b00;
+  background-color: #e36b00;
+  box-shadow: 0 8px 20px rgba(227, 107, 0, 0.7);
 }
 
-/* Services Preview Section */
+/* ---- Services Preview on Home Page ---- */
+
 .services-preview {
-  padding: 80px 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 80px auto 120px;
+  padding: 0 20px;
   text-align: center;
 }
 
 .services-preview h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #003B5C;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
-.service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
+.services-preview .service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-.service-card {
-  background: #fdfdfd;
-  border-radius: 16px;
-  padding: 40px 30px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+.services-preview .service-card {
+  background: #f8fafd;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 59, 92, 0.1);
+  max-width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
-  transition: transform 0.3s ease;
 }
 
-.service-card:hover {
-  transform: translateY(-8px);
+.services-preview .service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 16px 35px rgba(0, 59, 92, 0.15);
 }
 
-.service-card img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
+.services-preview .service-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 25px;
 }
 
-.service-card h3 {
+.services-preview .service-card h3 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 15px;
   color: #003B5C;
 }
 
-.service-card p {
-  font-family: 'Roboto', sans-serif;
-  color: #555;
+.services-preview .service-card p {
   font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
 }
 
-/* Footer */
-.footer {
-  background-color: #003B5C;
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-}
+/* Responsive */
 
-.footer-content p {
-  margin-bottom: 10px;
-}
-
-.social-icons a {
-  color: white;
-  margin: 0 12px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #ff7f00;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
+@media (max-width: 960px) {
+  .hero-home {
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
   }
-  
-  .service-cards {
-    grid-template-columns: 1fr;
+
+  .hero-home .hero-content {
+    max-width: 100%;
+  }
+
+  .services-preview .service-cards {
+    flex-direction: column;
+    gap: 40px;
   }
 }
