@@ -3,91 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shadowgrid Solutions - IT Software & Hardware Solutions</title>
+  <title>Shadowgrid Solutions | IT Software & Hardware Solutions</title>
+  <link rel="stylesheet" href="assets/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- Navbar -->
   <header class="navbar">
-    <div class="container navbar-container">
-      <div class="logo">
-        <img src="assets/shadowgrid-logo.svg" alt="Shadowgrid Solutions Logo" />
-        <div class="company-name">
-          Shadowgrid Solutions<br />
-          <span class="tagline">IT Software & Hardware Solutions</span>
-        </div>
+    <div class="logo">
+      <img src="assets/shadowgrid-logo.svg" alt="Shadowgrid Solutions Logo" />
+      <div class="company-name">
+        Shadowgrid Solutions
+        <div style="font-size: 0.85rem; font-weight: 400; color: #AFCBFF;">IT Software & Hardware Solutions</div>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#specialties" class="active">Our Specialties</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
     </div>
+    <nav>
+      <ul>
+        <li><a href="#specialties" class="active">Our Specialties</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero-home">
-    <div class="container hero-content">
+    <div class="hero-content container">
       <h1>Save on Your Microsoft 365 & Azure Subscriptions</h1>
       <p>Thanks to our Microsoft Partnership, get up to 30% off your current plans with the same features and service.</p>
-      <a href="#contact" class="btn-primary">Schedule a Free Consultation</a>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Schedule a Free Consultation</button>
     </div>
   </section>
 
+  <!-- Specialties Section -->
   <section id="specialties">
     <h2>Our Specialties</h2>
-    <div class="hover-boxes">
-      <div class="hover-box">
+    <div class="hover-boxes container">
+
+      <div class="hover-box" tabindex="0" aria-label="Microsoft 365 and Azure Licensing specialty">
         <h3>Microsoft 365 & Azure Licensing</h3>
         <p>Leverage our Microsoft partnership to get unbeatable pricing on your M365 and Azure licenses — identical plans, lower cost.</p>
       </div>
-      <div class="hover-box">
+
+      <div class="hover-box" tabindex="0" aria-label="Cloud and Endpoint Security specialty">
         <h3>Cloud & Endpoint Security</h3>
         <p>Protect your business with cutting-edge security solutions for cloud environments and endpoint devices.</p>
       </div>
-      <div class="hover-box">
+
+      <div class="hover-box" tabindex="0" aria-label="Third-Party Software Licenses specialty">
         <h3>Third-Party Software Licenses</h3>
         <p>We offer competitive licenses for industry-leading software like Adobe, BitTitan, and more, tailored to your needs.</p>
       </div>
-      <div class="hover-box">
+
+      <div class="hover-box" tabindex="0" aria-label="Hardware Solutions specialty">
         <h3>Hardware Solutions</h3>
         <p>From desktops to servers and peripherals, get quality hardware at discounted prices, bundled with expert support.</p>
       </div>
+
     </div>
   </section>
 
-  <section id="about">
-    <div class="container about-content">
-      <h2>About Shadowgrid Solutions</h2>
-      <p>Shadowgrid Solutions partners with businesses to optimize their IT investments — saving costs on licenses and hardware without compromising service quality. Our expertise spans Microsoft technologies and a broad portfolio of trusted software and hardware vendors.</p>
-      <p>We pride ourselves on transparent pricing, personalized service, and delivering measurable savings to help your business grow.</p>
-    </div>
+  <!-- About Section -->
+  <section id="about" class="about-content container">
+    <h2>About Shadowgrid Solutions</h2>
+    <p>Shadowgrid Solutions partners with businesses to optimize their IT investments — saving costs on licenses and hardware without compromising service quality. Our expertise spans Microsoft technologies and a broad portfolio of trusted software and hardware vendors.</p>
+    <p>We pride ourselves on transparent pricing, personalized service, and delivering measurable savings to help your business grow.</p>
   </section>
 
-  <section id="contact">
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section container">
     <h2>Get In Touch</h2>
-    <div class="container contact-section">
-      <form class="contact-form" action="mailto:contact@shadowgridsolutions.com" method="POST" enctype="text/plain">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="Name" required />
+    <form class="contact-form" action="#" method="POST" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" placeholder="Your name" required />
 
-        <label for="company">Company</label>
-        <input type="text" id="company" name="Company" required />
+      <label for="company">Company</label>
+      <input id="company" name="company" type="text" placeholder="Your company" />
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="Email" required />
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="your.email@example.com" required />
 
-        <label for="message">Message</label>
-        <textarea id="message" name="Message" rows="5" placeholder="How can we help you?" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
 
-        <button type="submit" class="btn-primary">Request a Call</button>
-      </form>
-    </div>
+      <button type="submit" class="btn-primary">Request a Call</button>
+    </form>
   </section>
 
+  <!-- Footer -->
   <footer class="footer">
     <p>© 2025 Shadowgrid Solutions. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
