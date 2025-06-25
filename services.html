@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services - ShadowGrid Solutions</title>
+  <title>Our Services - ShadowGrid Solutions</title>
   <link rel="stylesheet" href="assets/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 </head>
@@ -11,71 +11,81 @@
 
   <!-- Navbar -->
   <header class="navbar">
-    <div class="container">
-      <div class="logo">
-        <a href="index.html"><img src="assets/logo.png" alt="ShadowGrid Solutions" /></a>
-      </div>
-      <nav class="nav-links">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html" class="active">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="ShadowGrid Solutions" />
+      </a>
     </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Services Hero Section -->
-  <section class="hero" style="background-image: url('assets/services-hero.jpg'); height: 50vh;">
-    <div class="hero-content container" style="max-width: 700px;">
+  <!-- Page Banner -->
+  <section class="page-hero">
+    <div class="page-hero-content">
       <h1>Our Services</h1>
-      <p>Comprehensive IT solutions designed to drive your business forward.</p>
+      <p>Tailored technology solutions to elevate your business performance.</p>
     </div>
   </section>
 
-  <!-- Services Grid Section -->
-  <section class="container services-grid" style="max-width: 1200px; padding: 80px 20px;">
-    <div class="service-card">
-      <img src="assets/icons/m365.svg" alt="Microsoft 365" />
-      <h3>Microsoft 365 Solutions</h3>
-      <p>Empower your team with cloud-based productivity tools for collaboration and communication.</p>
+  <!-- Services Section -->
+  <section class="services-full">
+    <div class="container">
+      <div class="service-block">
+        <img src="assets/icons/m365.svg" alt="Microsoft 365" />
+        <div>
+          <h2>Microsoft 365 Solutions</h2>
+          <p>Empower your workforce with integrated Microsoft 365 tools — email, collaboration, security, and more — expertly configured for maximum productivity and minimal hassle.</p>
+        </div>
+      </div>
+
+      <div class="service-block reverse">
+        <img src="assets/icons/azure.svg" alt="Azure Cloud" />
+        <div>
+          <h2>Azure Cloud Services</h2>
+          <p>Deploy scalable, flexible infrastructure on Microsoft Azure. From virtual desktops to hybrid cloud setups, we help you migrate and manage with ease and efficiency.</p>
+        </div>
+      </div>
+
+      <div class="service-block">
+        <img src="assets/icons/security.svg" alt="Cybersecurity" />
+        <div>
+          <h2>Cybersecurity & Compliance</h2>
+          <p>Protect your data, clients, and business continuity with our advanced security solutions. We implement industry-best practices tailored to your environment and compliance needs.</p>
+        </div>
+      </div>
+
+      <div class="service-block reverse">
+        <img src="assets/icons/support.svg" alt="IT Support" />
+        <div>
+          <h2>Managed IT Support</h2>
+          <p>Round-the-clock monitoring, remote assistance, and proactive IT support keep your systems running smoothly — so you can focus on growth, not glitches.</p>
+        </div>
+      </div>
     </div>
-    <div class="service-card">
-      <img src="assets/icons/azure.svg" alt="Azure Cloud" />
-      <h3>Azure Cloud Services</h3>
-      <p>Flexible and scalable cloud infrastructure tailored to your business needs.</p>
-    </div>
-    <div class="service-card">
-      <img src="assets/icons/security.svg" alt="Security Solutions" />
-      <h3>Cybersecurity</h3>
-      <p>Protect your digital assets with advanced threat detection and prevention strategies.</p>
-    </div>
-    <div class="service-card">
-      <img src="assets/icons/consulting.svg" alt="IT Consulting" />
-      <h3>IT Consulting</h3>
-      <p>Expert guidance to optimize your IT environment and align technology with your goals.</p>
-    </div>
-    <div class="service-card">
-      <img src="assets/icons/support.svg" alt="Managed IT Support" />
-      <h3>Managed IT Support</h3>
-      <p>Proactive and reliable support services to keep your business running smoothly.</p>
-    </div>
-    <div class="service-card">
-      <img src="assets/icons/cloudmigration.svg" alt="Cloud Migration" />
-      <h3>Cloud Migration</h3>
-      <p>Seamless transition of your existing infrastructure to cloud platforms with minimal disruption.</p>
-    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <h2>Ready to Upgrade Your IT?</h2>
+    <p>Let’s design a custom solution that fits your business goals.</p>
+    <a href="contact.html" class="btn-primary">Get in Touch</a>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content container">
+    <div class="footer-content">
       <p>© 2025 ShadowGrid Solutions</p>
       <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
-        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
       </div>
     </div>
   </footer>
