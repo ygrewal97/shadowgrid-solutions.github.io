@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ShadowGrid Solutions | IT Software & Hardware Solutions</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>ShadowGrid Solutions - Empowering Your Digital Future</title>
+  <link rel="stylesheet" href="assets/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -12,9 +12,7 @@
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
-      <a href="index.html">
-        <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
-      </a>
+      <img src="assets/logo.png" alt="ShadowGrid Solutions" />
     </div>
     <nav>
       <ul>
@@ -35,37 +33,79 @@
     </div>
   </section>
 
-  <!-- Services Preview Section -->
-  <section class="services-preview">
-    <h2>Our Core Services</h2>
-    <div class="service-cards">
-      <div class="service-card">
-        <img src="assets/icons/m365.svg" alt="Microsoft 365" />
-        <h3>Microsoft 365</h3>
-        <p>Boost productivity with cloud-based collaboration and tools.</p>
+  <!-- Specialties Section -->
+  <section class="specialties-section">
+    <h2>Our Specialties</h2>
+    <div class="specialties-grid">
+      <div class="specialty-card scroll-animate">
+        <h3>Microsoft 365 & Azure Licensing</h3>
+        <p>Unlock flexible, cost-effective Microsoft 365 and Azure licensing tailored to your unique business needs. Our expert guidance ensures you maximize value and minimize spend without compromising on performance.</p>
       </div>
-      <div class="service-card">
-        <img src="assets/icons/azure.svg" alt="Azure Cloud" />
-        <h3>Azure Cloud</h3>
-        <p>Reliable, scalable, and secure cloud infrastructure solutions.</p>
+      <div class="specialty-card scroll-animate">
+        <h3>Advanced Security Software</h3>
+        <p>Protect your business with cutting-edge security solutions that safeguard your cloud infrastructure and endpoints. From threat detection to compliance, we deliver robust defenses that give you peace of mind.</p>
       </div>
-      <div class="service-card">
-        <img src="assets/icons/security.svg" alt="Security Solutions" />
-        <h3>Security Solutions</h3>
-        <p>Protect your digital assets with enterprise-grade security.</p>
+      <div class="specialty-card scroll-animate">
+        <h3>Hardware Solutions</h3>
+        <p>Equip your team with reliable, high-performance hardware tailored for today’s demanding IT environments. From desktops to servers, we source and configure equipment that drives productivity and uptime.</p>
+      </div>
+      <div class="specialty-card scroll-animate">
+        <h3>Comprehensive Third-Party Software Licensing</h3>
+        <p>Access a broad portfolio of third-party software licenses, including Adobe and more. Streamline procurement and reduce costs with our trusted vendor partnerships and expert license management.</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 ShadowGrid Solutions. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="#">LinkedIn</a>
-      <a href="#">Twitter</a>
-      <a href="#">Facebook</a>
+    <div class="footer-content">
+      <p>© 2025 ShadowGrid Solutions</p>
+      <div class="social-icons">
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+      </div>
     </div>
   </footer>
 
+  <script>
+    // Scroll Animation JS
+    const scrollElements = document.querySelectorAll(".scroll-animate");
+
+    const elementInView = (el, dividend = 1.25) => {
+      const elementTop = el.getBoundingClientRect().top;
+      return (
+        elementTop <=
+        (window.innerHeight || document.documentElement.clientHeight) / dividend
+      );
+    };
+
+    const displayScrollElement = (element) => {
+      element.classList.add("scrolled");
+    };
+
+    const hideScrollElement = (element) => {
+      element.classList.remove("scrolled");
+    };
+
+    const handleScrollAnimation = () => {
+      scrollElements.forEach((el) => {
+        if (elementInView(el, 1.25)) {
+          displayScrollElement(el);
+        } else {
+          hideScrollElement(el);
+        }
+      });
+    };
+
+    window.addEventListener("scroll", () => {
+      handleScrollAnimation();
+    });
+
+    // Trigger animation on page load for elements already in view
+    window.addEventListener("load", () => {
+      handleScrollAnimation();
+    });
+  </script>
 </body>
 </html>
