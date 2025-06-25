@@ -3,106 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ShadowGrid Solutions | Empowering Your Digital Transformation</title>
+  <title>Home - Your Business Name</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <header class="navbar" role="banner">
+    <a href="index.html" class="logo" aria-label="Your Business Name Home">
+      <img src="assets/logo.svg" alt="Your Business Logo" />
+    </a>
+    <nav role="navigation" aria-label="Primary navigation">
+      <ul>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header class="navbar" role="banner">
-  <a href="index.html" class="logo" aria-label="ShadowGrid Solutions Home">
-    <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
-  </a>
-  <nav role="navigation" aria-label="Primary navigation">
-    <ul>
-      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <section class="hero-home fade-in-up" tabindex="-1">
+      <h1>Empowering Your Business with Innovative Solutions</h1>
+      <p>At Your Business Name, we combine expertise and creativity to deliver cutting-edge services tailored to your unique needs.</p>
+      <a href="services.html" class="btn-primary">Explore Our Services</a>
+    </section>
 
-<main>
-  <section class="hero-home fade-in-up" role="region" aria-label="Hero banner">
-    <div class="hero-content">
-      <h1>Empowering Your Digital Transformation</h1>
-      <p>Leverage innovative IT solutions, scalable cloud infrastructure, and dedicated support tailored to fuel your business growth.</p>
-      <a href="services.html" class="btn-primary">Discover Our Services</a>
-    </div>
-  </section>
+    <section class="services-preview fade-in-up" tabindex="-1" style="transition-delay: 0.2s;">
+      <h2>Our Core Services</h2>
+      <div class="service-cards">
+        <article class="service-card" tabindex="0" aria-label="Service: Consulting">
+          <img src="assets/icons/consulting.svg" alt="Consulting Icon" />
+          <h3>Consulting</h3>
+          <p>Expert advice and strategy development to help your business grow sustainably.</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Service: Development">
+          <img src="assets/icons/development.svg" alt="Development Icon" />
+          <h3>Development</h3>
+          <p>Custom software solutions built with the latest technology tailored for your needs.</p>
+        </article>
+        <article class="service-card" tabindex="0" aria-label="Service: Support">
+          <img src="assets/icons/support.svg" alt="Support Icon" />
+          <h3>Support</h3>
+          <p>Reliable and proactive support ensuring your systems run smoothly 24/7.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 
-  <section class="services-preview fade-in-up" aria-label="Our Services">
-    <h2>Our Core Services</h2>
-    <div class="service-cards">
-      <article class="service-card" tabindex="0">
-        <img src="assets/cloud-icon.svg" alt="Cloud Migration Icon" />
-        <h3>Cloud Migration</h3>
-        <p>Seamlessly transition your operations to secure and scalable cloud platforms, minimizing downtime.</p>
-      </article>
-      <article class="service-card" tabindex="0">
-        <img src="assets/cybersecurity-icon.svg" alt="Cybersecurity Icon" />
-        <h3>Cybersecurity</h3>
-        <p>Protect your data and infrastructure with our cutting-edge security solutions tailored for your business.</p>
-      </article>
-      <article class="service-card" tabindex="0">
-        <img src="assets/support-icon.svg" alt="IT Support Icon" />
-        <h3>IT Support</h3>
-        <p>Reliable, 24/7 IT support to keep your systems running smoothly and efficiently.</p>
-      </article>
-    </div>
-  </section>
+  <footer>
+    <p>&copy; 2025 Your Business Name. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="terms.html">Terms of Service</a>
+    </p>
+  </footer>
 
-  <section class="testimonials fade-in-up" aria-label="Customer Testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial-cards">
-      <blockquote class="testimonial-card" tabindex="0">
-        <p>"ShadowGrid Solutions transformed our IT infrastructure. Their expertise and proactive support have been invaluable."</p>
-        <footer>- Sarah L., CEO, Tech Innovators</footer>
-      </blockquote>
-      <blockquote class="testimonial-card" tabindex="0">
-        <p>"Professional, responsive, and knowledgeable. They understood our business needs and delivered beyond expectations."</p>
-        <footer>- Mark R., CTO, Fintech Corp</footer>
-      </blockquote>
-    </div>
-  </section>
-
-  <section class="case-studies fade-in-up" aria-label="Case Studies">
-    <h2>Real Results for Our Clients</h2>
-    <div class="case-study-cards">
-      <article class="case-study-card" tabindex="0">
-        <h3>Cloud Migration for Global Retailer</h3>
-        <p>Reduced costs by 30% while improving scalability and uptime.</p>
-        <a href="#" class="btn-secondary" aria-label="Read more about Cloud Migration case study">Read More</a>
-      </article>
-      <article class="case-study-card" tabindex="0">
-        <h3>Cybersecurity Overhaul for Financial Firm</h3>
-        <p>Prevented breaches and ensured regulatory compliance in a high-risk industry.</p>
-        <a href="#" class="btn-secondary" aria-label="Read more about Cybersecurity case study">Read More</a>
-      </article>
-    </div>
-  </section>
-</main>
-
-<footer role="contentinfo">
-  <p>© 2025 ShadowGrid Solutions. All rights reserved.</p>
-  <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-</footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.fade-in-up');
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
+  <script>
+    // Scroll fade-in animation script
+    document.addEventListener('DOMContentLoaded', () => {
+      const faders = document.querySelectorAll('.fade-in-up');
+      const options = {
+        threshold: 0.1,
+      };
+      const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    elements.forEach(el => observer.observe(el));
-  });
-</script>
+          appearOnScroll.unobserve(entry.target);
+        });
+      }, options);
 
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
 </body>
 </html>
