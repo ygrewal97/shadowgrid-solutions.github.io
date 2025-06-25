@@ -4,23 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ShadowGrid Solutions - Empowering Your Digital Future</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto&display=swap" rel="stylesheet" />
+  
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 
   <!-- Navbar -->
   <header class="navbar">
     <div class="container">
-      <div class="logo">
-        <img src="assets/logo.png" alt="ShadowGrid Solutions" />
-      </div>
-      <nav>
+      <a href="index.html" class="logo" aria-label="ShadowGrid Solutions Home">
+        <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
+      </a>
+      <nav class="nav-links" aria-label="Primary Navigation">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="btn-outline">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -29,45 +36,61 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="container hero-content">
-      <h1>Empowering Your Business with Next-Level IT Solutions</h1>
-      <p>Innovative technology, scalable cloud services, and secure infrastructure tailored for your growth.</p>
+      <h1>Empowering Your Business<br />with Next-Level IT Solutions</h1>
+      <p>Innovative technology, scalable cloud services, and secure infrastructure tailored to fuel your growth and success.</p>
       <a href="contact.html" class="btn-primary">Request a Free Consultation</a>
     </div>
   </section>
 
-  <!-- Services Preview Section -->
+  <!-- Services Preview -->
   <section class="services-preview">
     <div class="container">
-      <h2>What We Offer</h2>
-      <div class="service-cards">
-        <div class="service-card">
-          <img src="assets/icons/m365.svg" alt="Microsoft 365" />
+      <h2>Our Core Services</h2>
+      <div class="services-grid">
+
+        <article class="service-card">
+          <img src="assets/icons/m365.svg" alt="Microsoft 365 Icon" />
           <h3>Microsoft 365</h3>
-          <p>Collaboration tools and productivity suites to empower your team.</p>
-        </div>
-        <div class="service-card">
-          <img src="assets/icons/azure.svg" alt="Azure Cloud" />
+          <p>Streamline collaboration and boost productivity with powerful cloud tools tailored for your team.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="assets/icons/azure.svg" alt="Azure Cloud Icon" />
           <h3>Azure Cloud</h3>
-          <p>Flexible, scalable cloud solutions for modern business demands.</p>
-        </div>
-        <div class="service-card">
-          <img src="assets/icons/security.svg" alt="Security Solutions" />
+          <p>Leverage flexible, scalable cloud solutions that evolve alongside your business needs.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="assets/icons/security.svg" alt="Security Solutions Icon" />
           <h3>Security Solutions</h3>
-          <p>Comprehensive protection from cyber threats and data breaches.</p>
-        </div>
+          <p>Protect your data and infrastructure with state-of-the-art cybersecurity strategies.</p>
+        </article>
+
       </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-choose-us">
+    <div class="container">
+      <h2>Why ShadowGrid Solutions?</h2>
+      <ul>
+        <li><strong>Tailored Solutions:</strong> We customize IT services to match your unique business goals.</li>
+        <li><strong>Expert Team:</strong> Certified professionals with decades of industry experience.</li>
+        <li><strong>Reliable Support:</strong> 24/7 customer care and proactive monitoring.</li>
+      </ul>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content container">
-      <p>© 2025 ShadowGrid Solutions</p>
-      <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
-        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
-      </div>
+    <div class="container footer-content">
+      <p>© 2025 ShadowGrid Solutions. All rights reserved.</p>
+      <nav aria-label="Social Media Links" class="social-icons">
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+      </nav>
     </div>
   </footer>
 
