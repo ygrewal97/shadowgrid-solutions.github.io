@@ -3,94 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services - Your Business Name</title>
+  <title>Services | ShadowGrid Solutions - IT Software & Hardware Solutions</title>
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="navbar" role="banner">
-    <a href="index.html" class="logo" aria-label="Your Business Name Home">
-      <img src="assets/logo.svg" alt="Your Business Logo" />
-    </a>
-    <nav role="navigation" aria-label="Primary navigation">
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="ShadowGrid Solutions" />
+      <span class="company-name">ShadowGrid Solutions</span>
+    </div>
+    <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="services-intro fade-in-up" tabindex="-1">
-      <h1>Our Professional Services</h1>
-      <p>We provide a wide range of services designed to help your business excel and innovate in today's competitive market.</p>
-    </section>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <h1>Our Expert IT Services</h1>
+    <p>Delivering tailored software and hardware solutions to empower your business and drive growth.</p>
+  </section>
 
-    <section class="services-list fade-in-up" tabindex="-1" style="transition-delay: 0.2s;">
-      <div class="service-cards">
-        <article class="service-card" tabindex="0" aria-label="Service: Consulting">
-          <img src="assets/icons/consulting.svg" alt="Consulting Icon" />
-          <h3>Consulting</h3>
-          <p>Strategic guidance to optimize your business operations and growth plans.</p>
-        </article>
-        <article class="service-card" tabindex="0" aria-label="Service: Software Development">
-          <img src="assets/icons/development.svg" alt="Development Icon" />
-          <h3>Software Development</h3>
-          <p>Custom software tailored to meet your unique business challenges and goals.</p>
-        </article>
-        <article class="service-card" tabindex="0" aria-label="Service: IT Support">
-          <img src="assets/icons/support.svg" alt="Support Icon" />
-          <h3>IT Support</h3>
-          <p>Comprehensive support and maintenance to keep your technology running flawlessly.</p>
-        </article>
-        <article class="service-card" tabindex="0" aria-label="Service: Cloud Solutions">
-          <img src="assets/icons/cloud.svg" alt="Cloud Icon" />
-          <h3>Cloud Solutions</h3>
-          <p>Innovative cloud-based services that enhance efficiency and scalability.</p>
-        </article>
-        <article class="service-card" tabindex="0" aria-label="Service: Cybersecurity">
-          <img src="assets/icons/cybersecurity.svg" alt="Cybersecurity Icon" />
-          <h3>Cybersecurity</h3>
-          <p>Protect your business with our advanced security solutions and monitoring.</p>
-        </article>
-        <article class="service-card" tabindex="0" aria-label="Service: Data Analytics">
-          <img src="assets/icons/analytics.svg" alt="Analytics Icon" />
-          <h3>Data Analytics</h3>
-          <p>Leverage data insights to drive smarter decisions and business strategies.</p>
-        </article>
-      </div>
-    </section>
-  </main>
+  <!-- Services Detail Section -->
+  <section class="services-detail">
+    <div class="service-item">
+      <h2>Microsoft 365 & Azure Licensing</h2>
+      <p>Unlock flexible, cost-effective licensing options designed around your business needs. Maximize productivity with seamless integration, expert guidance, and the latest features—all while reducing your overall IT spend.</p>
+    </div>
+    <div class="service-item">
+      <h2>Advanced Security Software</h2>
+      <p>Protect your critical assets with state-of-the-art security solutions. Our offerings include cloud and endpoint protection, threat detection, and compliance services, helping you stay one step ahead of cyber threats.</p>
+    </div>
+    <div class="service-item">
+      <h2>Hardware Solutions</h2>
+      <p>From high-performance desktops to reliable servers, we provide expertly sourced and configured hardware tailored to your environment. Ensure maximum uptime and efficiency with equipment built to meet today’s demanding IT standards.</p>
+    </div>
+    <div class="service-item">
+      <h2>Third-Party Software Licensing</h2>
+      <p>Gain access to a broad portfolio of third-party software licenses, including Adobe and more. Streamline your software procurement and management with our trusted partnerships and expert licensing support.</p>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Your Business Name. All rights reserved.</p>
-    <p>
-      <a href="privacy.html">Privacy Policy</a> | 
-      <a href="terms.html">Terms of Service</a>
-    </p>
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <h2>Ready to elevate your IT infrastructure?</h2>
+    <a href="contact.html" class="btn-primary">Request Your Free Consultation</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 ShadowGrid Solutions</p>
   </footer>
 
-  <script>
-    // Scroll fade-in animation script
-    document.addEventListener('DOMContentLoaded', () => {
-      const faders = document.querySelectorAll('.fade-in-up');
-      const options = {
-        threshold: 0.1,
-      };
-      const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add('visible');
-          appearOnScroll.unobserve(entry.target);
-        });
-      }, options);
-
-      faders.forEach(fader => {
-        appearOnScroll.observe(fader);
-      });
-    });
-  </script>
 </body>
 </html>
