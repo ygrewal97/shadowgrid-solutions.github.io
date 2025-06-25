@@ -3,80 +3,63 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us - ShadowGrid Solutions</title>
-  <link rel="stylesheet" href="assets/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+  <title>Contact Us | ShadowGrid Solutions</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-      <a href="index.html">
-        <img src="assets/logo.png" alt="ShadowGrid Solutions" />
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="navbar" role="banner">
+  <a href="index.html" class="logo" aria-label="ShadowGrid Solutions Home">
+    <img src="assets/logo.png" alt="ShadowGrid Solutions Logo" />
+  </a>
+  <nav role="navigation" aria-label="Primary navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- Contact Page Banner -->
-  <section class="page-hero">
-    <div class="page-hero-content">
-      <h1>Contact Us</h1>
-      <p>We’d love to hear from you. Reach out to us for a consultation or any questions.</p>
-    </div>
+<main>
+  <section class="contact-form fade-in-up" style="max-width:600px; margin: 100px auto; padding: 0 30px;">
+    <h1>Get in Touch</h1>
+    <form action="#" method="POST" aria-label="Contact form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required aria-required="true" />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required aria-required="true" />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
   </section>
+</main>
 
-  <!-- Contact Form Section -->
-  <section class="contact-section">
-    <div class="container contact-grid">
-      
-      <!-- Contact Details -->
-      <div class="contact-info">
-        <h2>Get in Touch</h2>
-        <p><strong>Email:</strong> info@shadowgridsolutions.com</p>
-        <p><strong>Phone:</strong> +44 1234 567890</p>
-        <p><strong>Address:</strong> 123 Tech Park Avenue, London, UK</p>
-        <p><strong>Business Hours:</strong> Mon–Fri, 9:00–17:00</p>
-      </div>
+<footer role="contentinfo">
+  <p>© 2025 ShadowGrid Solutions. All rights reserved.</p>
+  <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+</footer>
 
-      <!-- Contact Form -->
-      <form class="contact-form" action="#" method="POST">
-        <div class="form-group">
-          <label for="name">Name *</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-        <div class="form-group">
-          <label for="message">Message *</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn-primary">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>© 2025 ShadowGrid Solutions</p>
-      <div class="social-icons">
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank">Twitter</a>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
-      </div>
-    </div>
-  </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.fade-in-up');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
 
 </body>
 </html>
