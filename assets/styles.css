@@ -1,251 +1,134 @@
-/* ===== Reset and Base ===== */
+/* ---- Home Page Hero ---- */
 
-* {
-  box-sizing: border-box;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* ===== Navbar ===== */
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #003B5C;
-  padding: 20px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar .logo img {
-  height: 50px;
-}
-
-.navbar nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar nav ul li a {
-  color: #fff;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-
-.navbar nav ul li a:hover,
-.navbar nav ul li a.active {
-  background-color: #ff7f00;
-  color: #fff;
-}
-
-/* ===== Hero Sections ===== */
-
-.hero {
-  background: url('../assets/hero-bg.jpg') center center/cover no-repeat;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
+.hero-home {
   position: relative;
-  min-height: 300px;
+  min-height: 100vh;
+  background: url('../assets/hero-bg-large.jpg') center center/cover no-repeat;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 60px;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
-.hero .hero-overlay {
-  background-color: rgba(0, 59, 92, 0.7);
-  padding: 40px 20px;
-  border-radius: 16px;
-  max-width: 900px;
-  width: 100%;
+.hero-home::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 59, 92, 0.75); /* dark overlay */
+  z-index: 0;
 }
 
-.hero h1 {
+.hero-home .hero-content {
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
+}
+
+.hero-home h1 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 48px;
+  font-size: 3.5rem;
+  line-height: 1.2;
   margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 22px;
-  line-height: 1.4;
+.hero-home p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  color: #f0f0f0;
 }
 
-/* ===== Section Layouts ===== */
-
-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ===== Service Cards (for Services page and About core values) ===== */
-
-.service-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.service-card {
-  text-align: center;
-  padding: 30px;
-  background: linear-gradient(135deg, #f8fafd 0%, #e6f0f8 100%);
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 59, 92, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 59, 92, 0.2);
-}
-
-.service-card img {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 20px;
-}
-
-.service-card h3 {
-  font-size: 26px;
-  margin-bottom: 12px;
-  color: #003B5C;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.service-card p {
-  color: #555;
-  font-size: 18px;
-  line-height: 1.4;
-}
-
-/* ===== Contact Form Section ===== */
-
-.contact-form form {
-  display: grid;
-  gap: 20px;
-}
-
-.contact-form label {
-  font-weight: 600;
-  color: #003B5C;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  width: 100%;
-  padding: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  font-family: 'Roboto', sans-serif;
-  resize: vertical;
-  transition: border-color 0.3s ease;
-}
-
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
-.contact-form textarea:focus {
-  border-color: #ff7f00;
-  outline: none;
-}
-
-.contact-form button[type="submit"] {
-  padding: 15px 40px;
+.btn-primary {
+  display: inline-block;
   background-color: #ff7f00;
-  border: none;
-  border-radius: 6px;
   color: white;
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 700;
   font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 15px rgba(255, 127, 0, 0.5);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
 }
 
-.contact-form button[type="submit"]:hover {
+.btn-primary:hover {
   background-color: #e36b00;
+  box-shadow: 0 8px 20px rgba(227, 107, 0, 0.7);
 }
 
-/* ===== Footer ===== */
+/* ---- Services Preview on Home Page ---- */
 
-.footer {
-  background-color: #003B5C;
-  color: white;
-  padding: 30px 20px;
+.services-preview {
+  max-width: 1200px;
+  margin: 80px auto 120px;
+  padding: 0 20px;
   text-align: center;
-  font-size: 16px;
 }
 
-.footer .social-icons a {
-  color: white;
-  margin: 0 12px;
-  font-weight: 600;
-  transition: color 0.3s ease;
+.services-preview h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.8rem;
+  color: #003B5C;
+  margin-bottom: 50px;
 }
 
-.footer .social-icons a:hover {
-  color: #ff7f00;
+.services-preview .service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
-/* ===== Utility & Responsive ===== */
+.services-preview .service-card {
+  background: #f8fafd;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 59, 92, 0.1);
+  max-width: 320px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
 
-@media (max-width: 768px) {
-  .navbar {
+.services-preview .service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 16px 35px rgba(0, 59, 92, 0.15);
+}
+
+.services-preview .service-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 25px;
+}
+
+.services-preview .service-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #003B5C;
+}
+
+.services-preview .service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+
+@media (max-width: 960px) {
+  .hero-home {
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero-home .hero-content {
+    max-width: 100%;
+  }
+
+  .services-preview .service-cards {
     flex-direction: column;
-    padding: 15px 20px;
-  }
-  .navbar nav ul {
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 10px;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-
-  .hero p {
-    font-size: 18px;
-  }
-
-  section {
-    padding: 40px 15px;
-  }
-
-  .service-cards {
-    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
