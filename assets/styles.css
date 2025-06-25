@@ -8,8 +8,8 @@
 body, html {
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  background-color: #041C32;
-  color: #D7E6F9;
+  background-color: #E8F1FA; /* Light blue-ish white background */
+  color: #0B3D91; /* Darker blue text */
 }
 
 .container {
@@ -24,8 +24,8 @@ body, html {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #0A2A4D;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  background-color: #1E4DB7; /* Medium blue */
+  box-shadow: 0 2px 8px rgba(30,77,183,0.5);
   z-index: 1000;
 }
 
@@ -37,7 +37,7 @@ body, html {
 }
 
 .navbar .logo img {
-  height: 42px;
+  height: 45px;
 }
 
 .navbar nav ul {
@@ -49,7 +49,7 @@ body, html {
 .navbar nav ul li a {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  color: #AFCBFF;
+  color: #F9FAFB; /* Off-white */
   font-size: 1rem;
   padding: 8px 15px;
   border-radius: 6px;
@@ -59,8 +59,8 @@ body, html {
 
 .navbar nav ul li a.active,
 .navbar nav ul li a:hover {
-  background-color: #FF7F00;
-  color: #041C32;
+  background-color: #2E86FF; /* Brighter blue */
+  color: #FFFFFF;
 }
 
 /* Hero Section */
@@ -71,15 +71,14 @@ body, html {
   display: flex;
   align-items: center;
   padding-top: 80px;
-  text-align: left;
-  color: white;
+  color: #FFFFFF;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(4, 28, 50, 0.75);
+  background: rgba(30, 77, 183, 0.65); /* Lighter blue overlay */
   z-index: 0;
 }
 
@@ -95,51 +94,51 @@ body, html {
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.1;
-  color: #FF7F00;
+  color: #E1EFFE; /* Very light blue */
 }
 
 .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 40px;
-  color: #D7E6F9;
+  color: #D6E6FF; /* Soft light blue */
   font-weight: 400;
 }
 
 .btn-primary {
-  background-color: #FF7F00;
+  background-color: #2E86FF;
   padding: 18px 48px;
   border-radius: 50px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
-  color: #041C32;
+  color: #FFFFFF;
   text-decoration: none;
-  box-shadow: 0 6px 18px rgba(255,127,0,0.6);
+  box-shadow: 0 6px 18px rgba(46,134,255,0.6);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   display: inline-block;
 }
 
 .btn-primary:hover {
-  background-color: #e56f00;
-  box-shadow: 0 8px 24px rgba(229,111,0,0.8);
+  background-color: #1B5FEE;
+  box-shadow: 0 8px 24px rgba(27,95,238,0.8);
 }
 
 /* Services Preview */
 .services-preview {
-  background-color: #0A2A4D;
+  background-color: #FFFFFF; /* White background for contrast */
   padding: 100px 20px 120px;
   border-radius: 20px 20px 0 0;
   margin-top: -120px;
-  box-shadow: 0 -8px 40px rgba(0,0,0,0.7);
-  color: #D7E6F9;
+  box-shadow: 0 -8px 40px rgba(0,0,0,0.1);
+  color: #0B3D91;
+  text-align: center;
 }
 
 .services-preview h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 2.8rem;
-  color: #FF7F00;
+  color: #1E4DB7;
   margin-bottom: 70px;
-  text-align: center;
 }
 
 .service-cards {
@@ -149,30 +148,30 @@ body, html {
 }
 
 .service-card {
-  background-color: #163A66;
+  background-color: #E8F1FA; /* Very light blue card */
   border-radius: 20px;
   padding: 40px 30px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+  box-shadow: 0 6px 15px rgba(30, 77, 183, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 14px 45px rgba(255,127,0,0.8);
+  box-shadow: 0 12px 35px rgba(46, 134, 255, 0.35);
 }
 
 .service-card img {
   width: 70px;
   height: 70px;
   margin-bottom: 25px;
-  filter: brightness(0) invert(1);
+  filter: none; /* No invert, show original colors */
 }
 
 .service-card h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.75rem;
-  color: #FFB870;
+  color: #2E86FF;
   margin-bottom: 20px;
 }
 
@@ -180,16 +179,17 @@ body, html {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: #cdd7eb;
+  color: #0B3D91;
 }
 
 /* Footer */
 .footer {
-  background-color: #041C32;
+  background-color: #1E4DB7;
   padding: 45px 20px;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  color: #8ba4b8;
+  color: #F9FAFB;
+  margin-top: 100px;
 }
 
 .footer .footer-content {
@@ -206,19 +206,19 @@ body, html {
   margin: 0 18px;
   font-weight: 600;
   font-size: 1.15rem;
-  color: #8ba4b8;
+  color: #F9FAFB;
   transition: color 0.3s ease;
   text-decoration: none;
 }
 
 .social-icons a:hover {
-  color: #FF7F00;
+  color: #2E86FF;
 }
 
 /* Responsive */
 @media (max-width: 900px) {
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .services-preview h2 {
